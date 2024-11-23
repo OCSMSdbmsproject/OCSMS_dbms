@@ -55,7 +55,7 @@ if(isset($_REQUEST['submitrequest'])){
     </div>
     <div class="form-group">
       <label for="inputName">Name</label>
-      <input type="text" class="form-control" id="inputName" placeholder="Rahul" name="requestername">
+      <input type="text" class="form-control" id="inputName" placeholder="Name" name="requestername">
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
@@ -64,7 +64,7 @@ if(isset($_REQUEST['submitrequest'])){
       </div>
       <div class="form-group col-md-6">
         <label for="inputAddress2">Address Line 2</label>
-        <input type="text" class="form-control" id="inputAddress2" placeholder="Railway Colony" name="requesteradd2">
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Colony" name="requesteradd2">
       </div>
     </div>
     <div class="form-row">

@@ -18,13 +18,13 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/custom.css">
 
-  <title>OSMS</title>
+  <title>OCSMS</title>
 </head>
 
 <body>
   <!-- Start Navigation -->
   <nav class="navbar navbar-expand-sm navbar-dark bg-danger pl-5 fixed-top">
-    <a href="index.php" class="navbar-brand">OSMS</a>
+    <a href="index.php" class="navbar-brand">OCSMS</a>
     <span class="navbar-text">Customer's Happiness is our Aim</span>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myMenu">
       <span class="navbar-toggler-icon"></span>
@@ -40,22 +40,25 @@
     </div>
   </nav> <!-- End Navigation -->
 
-  <!-- Start Header Jumbotron-->
-  <header class="jumbotron back-image" style="background-image: url(images/Banner1.jpeg);">
-    <div class="myclass mainHeading">
-      <h1 class="text-uppercase text-danger font-weight-bold">Welcome to OSMS</h1>
+  <header class="jumbotron back-image" style="background-image: url(images/Banner13.jpg);">
+  <div class="myclass mainHeading" style="display: flex; justify-content: flex-end;">
+    <div style="margin-right: 1000px;">
+      <h1 class="text-uppercase text-danger font-weight-bold">Welcome to OCSMS</h1>
       <p class="font-italic">Customer's Happiness is our Aim</p>
       <a href="Requester/RequesterLogin.php" class="btn btn-success mr-4">Login</a>
       <a href="#registration" class="btn btn-danger mr-4">Sign Up</a>
     </div>
-  </header> <!-- End Header Jumbotron -->
+  </div>
+</header>
+
+
 
   <div class="container">
     <!--Introduction Section-->
     <div class="jumbotron">
-      <h3 class="text-center">OSMS Services</h3>
+      <h3 class="text-center">OCSMS Services</h3>
       <p>
-        OSMS Services is India’s leading chain of multi-brand Electronics and Electrical service
+        OCSMS Services is India’s leading chain of multi-brand Electronics and Electrical service
         workshops offering
         wide array of services. We focus on enhancing your uses experience by offering world-class
         Electronic
@@ -111,10 +114,8 @@
             <div class="card-body text-center">
               <img src="images/avtar1.jpeg" class="img-fluid" style="border-radius: 100px;">
               <h4 class="card-title">Rahul Kumar</h4>
-              <p class="card-text">Itaque illo explicabo voluptatum, saepe libero rerum, ad
-                ducimus voluptas
-                nesciunt debitis numquam.</p>
-            </div>
+              <p class="card-text" style="text-align: justify;">I had a great experience with the website; it is well-designed, intuitive, and highly efficient.</p>
+              </div>
           </div>
         </div> <!-- End Customer 1st Column-->
 
@@ -124,10 +125,8 @@
             <div class="card-body text-center">
               <img src="images/avtar2.jpeg" class="img-fluid" style="border-radius: 100px;">
               <h4 class="card-title">Sonam Sharma</h4>
-              <p class="card-text">Itaque illo explicabo voluptatum, saepe libero rerum, ad
-                ducimus voluptas
-                nesciunt debitis numquam.</p>
-            </div>
+              <p class="card-text" style="text-align: justify;">I had a great experience with the website; it is well-designed, intuitive, and highly efficient.</p>
+              </div>
           </div>
         </div> <!-- End Customer 2nd Column-->
 
@@ -137,10 +136,8 @@
             <div class="card-body text-center">
               <img src="images/avtar3.jpeg" class="img-fluid" style="border-radius: 100px;">
               <h4 class="card-title">Sumit Vyas</h4>
-              <p class="card-text">Itaque illo explicabo voluptatum, saepe libero rerum, ad
-                ducimus voluptas
-                nesciunt debitis numquam.</p>
-            </div>
+              <p class="card-text" style="text-align: justify;">I had a great experience with the website; it is well-designed, intuitive, and highly efficient.</p>
+              </div>
           </div>
         </div> <!-- End Customer 3rd Column-->
 
@@ -150,10 +147,8 @@
             <div class="card-body text-center">
               <img src="images/avtar4.jpeg" class="img-fluid" style="border-radius: 100px;">
               <h4 class="card-title">Jyoti Sinha</h4>
-              <p class="card-text">Itaque illo explicabo voluptatum, saepe libero rerum, ad
-                ducimus voluptas
-                nesciunt debitis numquam.</p>
-            </div>
+              <p class="card-text" style="text-align: justify;">I had a great experience with the website; it is well-designed, intuitive, and highly efficient.</p>
+              </div>
           </div>
         </div> <!-- End Customer 4th Column-->
       </div> <!-- End Customer Row-->
@@ -163,7 +158,7 @@
   <!--Start Contact Us-->
   <div class="container" id="Contact">
     <!--Start Contact Us Container-->
-    <h2 class="text-center mb-4">Contact US</h2> <!-- Contact Us Heading -->
+    <h2 class="text-center mb-4">Contact Us</h2> <!-- Contact Us Heading -->
     <div class="row">
 
       <!--Start Contact Us Row-->
@@ -173,19 +168,19 @@
       <div class="col-md-4 text-center">
         <!-- Start Contact Us 2nd Column-->
         <strong>Headquarter:</strong> <br>
-        OSMS Pvt Ltd, <br>
+        OCSMS Pvt Ltd, <br>
         Sec IV, Bokaro <br>
         Jharkhand - 834005 <br>
         Phone: +00000000 <br>
-        <a href="#" target="_blank">www.osms.com</a> <br>
+        <a href="#" target="_blank">www.ocsms.com</a> <br>
 
         <br><br>
         <strong>Delhi Branch:</strong> <br>
-        OSMS Pvt Ltd, <br>
+        OCSMS Pvt Ltd, <br>
         Ashok Nagar, Delhi <br>
         Delhi - 804002 <br>
         Phone: +00000000 <br>
-        <a href="#" target="_blank">www.osms.com</a> <br>
+        <a href="#" target="_blank">www.ocsms.com</a> <br>
       </div> <!-- End Contact Us 2nd Column-->
     </div> <!-- End Contact Us Row-->
   </div> <!-- End Contact Us Container-->
@@ -209,7 +204,7 @@
 
         <div class="col-md-6 text-right">
           <!-- Start Footer 2nd Column -->
-          <small> Designed by Someone &copy; 2018.
+          <small> Designed by DBMS team &copy; 2024.
           </small>
           <small class="ml-2"><a href="Admin/login.php">Admin Login</a></small>
         </div> <!-- End Footer 2nd Column -->
