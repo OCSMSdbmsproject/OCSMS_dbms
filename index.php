@@ -40,16 +40,15 @@
     </div>
   </nav> <!-- End Navigation -->
 
+  <!-- Start Header Jumbotron-->
   <header class="jumbotron back-image" style="background-image: url(images/Banner13.jpg);">
-  <div class="myclass mainHeading" style="display: flex; justify-content: flex-end;">
-    <div style="margin-right: 1000px;">
-      <h1 class="text-uppercase text-danger font-weight-bold">Welcome to OCSMS</h1>
+    <div class="myclass mainHeading">
+      <h1 class="text-uppercase text-danger font-weight-bold">Welcome to OSMS</h1>
       <p class="font-italic">Customer's Happiness is our Aim</p>
       <a href="Requester/RequesterLogin.php" class="btn btn-success mr-4">Login</a>
       <a href="#registration" class="btn btn-danger mr-4">Sign Up</a>
     </div>
-  </div>
-</header>
+  </header> <!-- End Header Jumbotron -->
 
 
 
