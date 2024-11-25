@@ -18,13 +18,13 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/custom.css">
 
-  <title>OCSMS</title>
+  <title>FixIT</title>
 </head>
 
 <body>
   <!-- Start Navigation -->
   <nav class="navbar navbar-expand-sm navbar-dark bg-danger pl-5 fixed-top">
-    <a href="index.php" class="navbar-brand">OCSMS</a>
+    <a href="index.php" class="navbar-brand">FixIT</a>
     <span class="navbar-text">Customer's Happiness is our Aim</span>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myMenu">
       <span class="navbar-toggler-icon"></span>
@@ -43,7 +43,7 @@
   <!-- Start Header Jumbotron-->
   <header class="jumbotron back-image" style="background-image: url(images/Banner13.jpg);">
     <div class="myclass mainHeading">
-      <h1 class="text-uppercase text-danger font-weight-bold">Welcome to OSMS</h1>
+      <h1 class="text-uppercase text-danger font-weight-bold">Welcome to FixIT</h1>
       <p class="font-italic">Customer's Happiness is our Aim</p>
       <a href="Requester/RequesterLogin.php" class="btn btn-success mr-4">Login</a>
       <a href="#registration" class="btn btn-danger mr-4">Sign Up</a>

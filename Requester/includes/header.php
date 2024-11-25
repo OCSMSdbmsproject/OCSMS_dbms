@@ -49,6 +49,13 @@
        </a>
       </li>
       <li class="nav-item">
+       <a class="nav-link <?php if(PAGE == 'ReviewService') { echo 'active'; } ?>" href="ReviewService.php">
+        <i class="fas fa-star"></i>
+        Review
+       </a>
+       </li>
+
+      <li class="nav-item">
        <a class="nav-link <?php if(PAGE == 'Requesterchangepass') { echo 'active'; } ?>" href="Requesterchangepass.php">
         <i class="fas fa-key"></i>
         Change Password
