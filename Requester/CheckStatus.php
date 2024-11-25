@@ -101,7 +101,9 @@ if($_SESSION['is_login']){
       </tr>
       <tr>
         <td>Technician Name</td>
-        <td>Zahir Khan</td>
+        <td>
+          <?php if(isset($row['assign_tech'])) {echo $row['assign_tech']; }?>
+        </td>
       </tr>
       <tr>
         <td>Customer Sign</td>
