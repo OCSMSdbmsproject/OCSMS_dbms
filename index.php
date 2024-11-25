@@ -41,7 +41,7 @@
   </nav> <!-- End Navigation -->
 
   <!-- Start Header Jumbotron-->
-  <header class="jumbotron back-image" style="background-image: url(images/Banner13.jpg);">
+  <header class="jumbotron back-image" style="background-image: url(images/Banner12.jpeg);">
     <div class="myclass mainHeading">
       <h1 class="text-uppercase text-danger font-weight-bold">Welcome to FixIT</h1>
       <p class="font-italic">Customer's Happiness is our Aim</p>
