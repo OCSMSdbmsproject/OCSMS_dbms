@@ -23,55 +23,90 @@
 
 <body>
   <!-- Start Navigation -->
-  <nav class="navbar navbar-expand-sm navbar-dark bg-danger pl-5 fixed-top">
-    <a href="index.php" class="navbar-brand">FixIT</a>
-    <span class="navbar-text">Customer's Happiness is our Aim</span>
-    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="myMenu">
-      <ul class="navbar-nav pl-5 custom-nav">
-        <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="#Services" class="nav-link">Services</a></li>
-        <li class="nav-item"><a href="#registration" class="nav-link">Registration</a></li>
-        <li class="nav-item"><a href="Requester/RequesterLogin.php" class="nav-link">Login</a></li>
-        <li class="nav-item"><a href="#Contact" class="nav-link">Contact</a></li>
-      </ul>
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+    <div class="container">
+        <a href="index.php" class="navbar-brand text-primary font-weight-bold">
+            <i class="fas fa-tools"></i> FixIT
+        </a>
+        <span class="navbar-text text-muted font-italic d-none d-md-inline">
+        Simplifying Computer Repairs For You
+        </span>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myMenu">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="index.php" class="nav-link text-dark font-weight-bold">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Services" class="nav-link text-dark font-weight-bold">
+                        Services
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#registration" class="nav-link text-dark font-weight-bold">
+                        Registration
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="Requester/RequesterLogin.php" class="nav-link text-dark font-weight-bold">
+                        Login
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Contact" class="nav-link text-dark font-weight-bold">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </nav> <!-- End Navigation -->
+</nav>
+<!-- End Navigation -->
 
-  <!-- Start Header Jumbotron-->
-  <header class="jumbotron back-image" style="background-image: url(images/Banner12.jpeg);">
-    <div class="myclass mainHeading">
-      <h1 class="text-uppercase text-danger font-weight-bold">Welcome to FixIT</h1>
-      <p class="font-italic">Customer's Happiness is our Aim</p>
-      <a href="Requester/RequesterLogin.php" class="btn btn-success mr-4">Login</a>
-      <a href="#registration" class="btn btn-danger mr-4">Sign Up</a>
+
+
+  <!-- Start Header Jumbotron -->
+<header class="jumbotron back-image text-center d-flex flex-column align-items-center justify-content-center" 
+    style="background-image: url('images/b10.jpg'); height: 100vh; background-size: cover; background-position: center; background-color: #e0f7fa;">
+    <div class="mainHeading text-center">
+        <h1 class="display-3 font-weight-bold mb-3" style="color: #004d40; text-shadow: 2px 2px 5px rgba(0,0,0,0.2);">
+            Welcome to <span style="color: #26a69a;">FixIT</span>
+        </h1>
+        <p class="lead font-italic mb-4" style="color: #004d40; text-shadow: 1px 1px 3px rgba(0,0,0,0.1);">
+            SIMPLIFYING COMPUTER REPAIRS FOR YOU
+        </p>
+        <div class="button-group">
+            <a href="Requester/RequesterLogin.php" class="btn btn-lg btn-success mx-2 px-4 py-2 shadow-lg login-btn">
+                Login
+            </a>
+            <a href="#registration" class="btn btn-lg btn-primary mx-2 px-4 py-2 shadow-lg signup-btn">
+                Sign Up
+            </a>
+        </div>
     </div>
-  </header> <!-- End Header Jumbotron -->
+</header>
+<!-- End Header Jumbotron -->
+
+
+
+
 
 
 
   <div class="container">
     <!--Introduction Section-->
     <div class="jumbotron">
-      <h3 class="text-center">OCSMS Services</h3>
-      <p>
-        OCSMS Services is India’s leading chain of multi-brand Electronics and Electrical service
-        workshops offering
-        wide array of services. We focus on enhancing your uses experience by offering world-class
-        Electronic
-        Appliances maintenance services. Our sole mission is “To provide Electronic Appliances care
-        services to
-        keep the devices fit and healthy and customers happy and smiling”.
-
-        With well-equipped Electronic Appliances service centres and fully trained mechanics, we
-        provide quality
-        services with excellent packages that are designed to offer you great savings.
-
-        Our state-of-art workshops are conveniently located in many cities across the country. Now you
-        can book
-        your service online by doing Registration.
+      <h3 class="text-center">FixIT Services</h3>
+      <p class="text-justify">
+      FixIT is a platform dedicated to offering quick and reliable solutions for all your computer-related issues. 
+      Our services connect users with expert technicians to diagnose, troubleshoot, and repair hardware and software problems efficiently.
+       We specialize in system optimization, virus removal, and hardware component repair. 
+       With a user-friendly interface, FixIT ensures seamless communication between users and technicians, enabling fast service delivery. 
+       Our mission is to minimize downtime and maximize customer satisfaction by providing top-notch technical support.
       </p>
 
     </div>
@@ -100,59 +135,45 @@
   <?php include('userRegistration.php') ?>
   <!-- End Registration  -->
 
-  <!-- Start Happy Customer  -->
-  <div class="jumbotron bg-danger" id="Customer">
-    <!-- Start Happy Customer Jumbotron -->
-    <div class="container">
-      <!-- Start Customer Container -->
-      <h2 class="text-center text-white">Happy Customers</h2>
-      <div class="row mt-5">
-        <div class="col-lg-3 col-sm-6">
-          <!-- Start Customer 1st Column-->
-          <div class="card shadow-lg mb-2">
-            <div class="card-body text-center">
-              <img src="images/avtar1.jpeg" class="img-fluid" style="border-radius: 100px;">
-              <h4 class="card-title">Rahul Kumar</h4>
-              <p class="card-text" style="text-align: justify;">I had a great experience with the website; it is well-designed, intuitive, and highly efficient.</p>
-              </div>
-          </div>
-        </div> <!-- End Customer 1st Column-->
+  <!-- Start Feedback -->
+<div class="container mt-5">
+    <h2 class="text-center mb-4">🌟 Happy Customers 🌟</h2>
+    <div class="row justify-content-center">
+        <?php
+        // Fetch top reviews (e.g., top 4 highest-rated)
+        $reviewsSql = "SELECT r.comment, r.photo, r.rating, rl.r_name 
+                       FROM reviews_tb AS r 
+                       INNER JOIN requesterlogin_tb AS rl ON r.user_id = rl.r_login_id 
+                       ORDER BY r.rating DESC LIMIT 4";
 
-        <div class="col-lg-3 col-sm-6">
-          <!-- Start Customer 2nd Column-->
-          <div class="card shadow-lg mb-2">
-            <div class="card-body text-center">
-              <img src="images/avtar2.jpeg" class="img-fluid" style="border-radius: 100px;">
-              <h4 class="card-title">Sonam Sharma</h4>
-              <p class="card-text" style="text-align: justify;">I had a great experience with the website; it is well-designed, intuitive, and highly efficient.</p>
-              </div>
-          </div>
-        </div> <!-- End Customer 2nd Column-->
+        $reviewsResult = $conn->query($reviewsSql);
 
-        <div class="col-lg-3 col-sm-6">
-          <!-- Start Customer 3rd Column-->
-          <div class="card shadow-lg mb-2">
-            <div class="card-body text-center">
-              <img src="images/avtar3.jpeg" class="img-fluid" style="border-radius: 100px;">
-              <h4 class="card-title">Sumit Vyas</h4>
-              <p class="card-text" style="text-align: justify;">I had a great experience with the website; it is well-designed, intuitive, and highly efficient.</p>
-              </div>
-          </div>
-        </div> <!-- End Customer 3rd Column-->
+        if ($reviewsResult->num_rows > 0) {
+            while ($review = $reviewsResult->fetch_assoc()) {
+                echo '<div class="col-md-3 col-sm-6 mb-4">';
+                echo '<div class="card review-card shadow-sm border-0 text-center">';
 
-        <div class="col-lg-3 col-sm-6">
-          <!-- Start Customer 4th Column-->
-          <div class="card shadow-lg mb-2">
-            <div class="card-body text-center">
-              <img src="images/avtar4.jpeg" class="img-fluid" style="border-radius: 100px;">
-              <h4 class="card-title">Jyoti Sinha</h4>
-              <p class="card-text" style="text-align: justify;">I had a great experience with the website; it is well-designed, intuitive, and highly efficient.</p>
-              </div>
-          </div>
-        </div> <!-- End Customer 4th Column-->
-      </div> <!-- End Customer Row-->
-    </div> <!-- End Customer Container -->
-  </div> <!-- End Customer Jumbotron -->
+                // Display user photo or default avatar
+                $userPhoto = !empty($review['photo']) ? 'uploads/' . htmlspecialchars($review['photo']) : 'default-avatar.png';
+                echo '<img src="' . $userPhoto . '" class="card-img-top rounded-circle mx-auto mt-3" alt="User Photo" 
+                        style="height: 120px; width: 120px; object-fit: cover; border: 3px solid #f8f9fa;">';
+
+                echo '<div class="card-body">';
+                echo '<h5 class="card-title font-weight-bold">' . htmlspecialchars($review['r_name']) . '</h5>';
+                echo '<p class="card-text text-muted small">' . htmlspecialchars($review['comment']) . '</p>';
+                echo '<p class="text-warning mb-0">' . str_repeat('★', $review['rating']) . str_repeat('☆', 5 - $review['rating']) . '</p>';
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+            }
+        } else {
+            echo '<p class="text-center text-muted">No reviews yet! Be the first to share your feedback.</p>';
+        }
+        ?>
+    </div>
+</div>
+<!-- End Feedback -->
+
 
   <!--Start Contact Us-->
   <div class="container" id="Contact">

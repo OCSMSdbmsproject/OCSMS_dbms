@@ -1,68 +1,47 @@
 <?php
-define('TITLE', 'Success');
+define('TITLE', 'Request Success');
+define('PAGE', 'SubmitRequest');
 include('includes/header.php'); 
 include('../dbConnection.php');
 session_start();
 
-// Check if user is logged in
-if (!isset($_SESSION['is_login'])) {
-    echo "<script> location.href='RequesterLogin.php'; </script>";
-    exit;
-}
+// Ensure that the session variable 'myid' exists
+if (isset($_SESSION['myid'])) {
+    $genid = $_SESSION['myid'];
 
-$rEmail = $_SESSION['rEmail'];
+    // Fetch the request details from the database
+    $sql = "SELECT * FROM submitrequest_tb WHERE request_id = '$genid'";
+    $result = $conn->query($sql);
+    
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        ?>
+        <div class="col-sm-9 col-md-10 mt-5">
+            <h3 class="text-center text-success">Request Submitted Successfully</h3>
+            <p><strong>Request ID: </strong><?php echo $row['request_id']; ?></p>
+            <p><strong>Request Info: </strong><?php echo $row['request_info']; ?></p>
+            <p><strong>Description: </strong><?php echo $row['request_desc']; ?></p>
+            <p><strong>Name: </strong><?php echo $row['requester_name']; ?></p>
+            <p><strong>Address Line 1: </strong><?php echo $row['requester_add1']; ?></p>
+            <p><strong>Address Line 2: </strong><?php echo $row['requester_add2']; ?></p>
+            <p><strong>City: </strong><?php echo $row['requester_city']; ?></p>
+            <p><strong>State: </strong><?php echo $row['requester_state']; ?></p>
+            <p><strong>Zip: </strong><?php echo $row['requester_zip']; ?></p>
+            <p><strong>Email: </strong><?php echo $row['requester_email']; ?></p>
+            <p><strong>Mobile: </strong><?php echo $row['requester_mobile']; ?></p>
+            <p><strong>Date: </strong><?php echo $row['request_date']; ?></p>
 
-// Validate that `myid` exists in the session
-if (!isset($_SESSION['myid'])) {
-    echo "<div class='alert alert-danger mt-5'>No request ID found. Please try submitting a new request.</div>";
-    exit;
-}
-
-$request_id = $_SESSION['myid'];
-
-// Retrieve request details using prepared statement
-$sql = "SELECT * FROM submitrequest_tb WHERE request_id = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $request_id);
-$stmt->execute();
-$result = $stmt->get_result();
-
-if ($result->num_rows == 1) {
-    $row = $result->fetch_assoc();
-    // Display the details in a table
-    echo "
-    <div class='ml-5 mt-5'>
-      <h3 class='text-center'>Request Submitted Successfully</h3>
-      <table class='table table-bordered'>
-        <tbody>
-          <tr><th>Request ID</th><td>{$row['request_id']}</td></tr>
-          <tr><th>Name</th><td>{$row['requester_name']}</td></tr>
-          <tr><th>Email ID</th><td>{$row['requester_email']}</td></tr>
-          <tr><th>Mobile</th><td>{$row['requester_mobile']}</td></tr>
-          <tr><th>Address Line 1</th><td>{$row['requester_add1']}</td></tr>
-          <tr><th>Address Line 2</th><td>{$row['requester_add2']}</td></tr>
-          <tr><th>City</th><td>{$row['requester_city']}</td></tr>
-          <tr><th>State</th><td>{$row['requester_state']}</td></tr>
-          <tr><th>Zip</th><td>{$row['requester_zip']}</td></tr>
-          <tr><th>Request Info</th><td>{$row['request_info']}</td></tr>
-          <tr><th>Request Description</th><td>{$row['request_desc']}</td></tr>
-          <tr><th>Request Date</th><td>{$row['request_date']}</td></tr>
-          <tr>
-            <td colspan='2' class='text-center'>
-              <form class='d-print-none'>
-                <input class='btn btn-danger' type='button' value='Print' onClick='window.print()'>
-              </form>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    ";
+            <!-- Print button -->
+            <form class="d-print-none">
+                <input class="btn btn-danger" type="submit" value="Print" onClick="window.print()">
+            </form>
+        </div>
+        <?php
+    } else {
+        echo "<div class='alert alert-warning col-sm-6 ml-5 mt-2' role='alert'>No Request Found!</div>";
+    }
 } else {
-    echo "<div class='alert alert-danger mt-5'>Unable to retrieve request details. Please try again later.</div>";
+    echo "<div class='alert alert-danger col-sm-6 ml-5 mt-2' role='alert'>No Request ID found in session!</div>";
 }
-
-$stmt->close();
-$conn->close();
-include('includes/footer.php'); 
 ?>
+<?php include('includes/footer.php'); ?>

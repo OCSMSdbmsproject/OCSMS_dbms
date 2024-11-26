@@ -66,6 +66,119 @@ fi-color:hover {
   margin-top: 50px;
 }
 
+/* Happy Customers Section */
+.container h2 {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  color: #343a40;
+  margin-bottom: 1.5rem;
+}
+
+.review-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.review-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.review-card .card-body {
+  padding: 1rem 0.5rem;
+}
+
+.review-card .card-title {
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+
+.review-card .card-text {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.review-card img {
+  transition: transform 0.3s ease;
+}
+
+.review-card img:hover {
+  transform: scale(1.1);
+}
+
+/* Navbar Background and Effects */
+.navbar {
+  background-color: #e0f7fa; /* Light Cyan for a fresh look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-brand img {
+  border-radius: 10px; /* Rounded edges for the logo */
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar .navbar-brand img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Link styling for navbar */
+.navbar .nav-link {
+  font-size: 1rem;
+  color: #004d40; /* Default dark teal for links */
+  font-weight: bold; /* Bold for better readability */
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #004d40; /* Keep the text teal for consistency */
+  background-color: #b2dfdb; /* Light mint green for hover effect */
+  border-radius: 5px; /* Smooth rounded effect for hover */
+  padding: 5px 10px; /* Add padding for a button-like hover */
+  text-decoration: none; /* Remove underline on hover */
+}
+
+/* Active state for current page link */
+.navbar .nav-link.active {
+  color: white;
+  background-color: #26a69a; /* Softer green for active state */
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+/* Login Button Hover Effect */
+.login-btn {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #388e3c; /* Darker green on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Sign Up Button Hover Effect */
+.signup-btn {
+    background-color: #2196f3;
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #1976d2; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+
 /* Setting Margin and Alignment for Welcome to OSM Mobile View */
 @media only screen and (max-width: 600px) {
   .myclass {
