@@ -67,7 +67,7 @@ include('includes/footer.php');
 <!-- Add Custom CSS for styling -->
 <style>
   body {
-    background: linear-gradient(to right, #e3f2fd, #f1f8e9); /* Light blue to light green gradient */
+    background: linear-gradient(to right, #d0e9ff, #e3f2fd); /* Lightish blue gradient */
     font-family: 'Poppins', sans-serif;
   }
   .container {
@@ -77,6 +77,11 @@ include('includes/footer.php');
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  }
+  .card:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
   }
   .card-header {
     font-size: 22px;
@@ -133,3 +138,5 @@ include('includes/footer.php');
     color: #721c24;
   }
 </style>
+
+

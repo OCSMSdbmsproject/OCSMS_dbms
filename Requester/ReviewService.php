@@ -36,13 +36,13 @@ $stmt->execute();
 $serviceResult = $stmt->get_result();
 ?>
 
-<!-- Full Page Background with Light Lavender-Blue -->
-    <!-- Center-Aligned Container with Subtle Aesthetic Colors -->
-    <div class="container" style="background-color: #dcdff1; padding: 40px; border-radius: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); width: 90%; max-width: 700px;">
+<!-- Full Page Background Color Set to Lightish Blue -->
+<body style="background-color: #d1e7f7;"> <!-- Lightish Blue Background for the Entire Page -->
+    <div class="container" style="background-color: #e6f4ff; padding: 40px; border-radius: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); width: 90%; max-width: 700px; margin-top: 100px; margin-bottom: 40px;">
         <div style="width: 100%; text-align: center;">
-            <h3 style="color: #333333; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold;">Your Service Requests</h3>
+            <h3 style="color: #3f4c6b; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold;">Your Service Requests</h3>
             <table class="table table-bordered" style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 20px auto; width: 100%; max-width: 650px;">
-                <thead style="background-color: #a9b8e6; color: #333333; font-weight: bold;">
+                <thead style="background-color: #c5d9ff; color: #3f4c6b; font-weight: bold;">
                     <tr style="text-align: center;">
                         <th>Request ID</th>
                         <th>Service Info</th>
@@ -72,7 +72,7 @@ $serviceResult = $stmt->get_result();
                             if ($hasReview) {
                                 echo "<button class='btn btn-secondary btn-sm' disabled>Review Submitted</button>";
                             } else {
-                                echo "<a href='SubmitReview.php?service_id=" . urlencode($serviceId) . "' class='btn btn-success btn-sm' style='background-color: #8a86c8; border-color: #8a86c8;'>Leave Review</a>";
+                                echo "<a href='SubmitReview.php?service_id=" . urlencode($serviceId) . "' class='btn btn-success btn-sm' style='background-color: #4a6fc1; border-color: #4a6fc1;'>Leave Review</a>";
                             }
                             echo "</td>";
                             echo "</tr>";
@@ -85,6 +85,6 @@ $serviceResult = $stmt->get_result();
             </table>
         </div>
     </div>
-
+</body>
 
 <?php include('includes/footer.php'); ?>

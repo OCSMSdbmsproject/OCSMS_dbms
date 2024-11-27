@@ -199,17 +199,17 @@
         <!-- Headquarter -->
         <div class="office-info mb-4">
           <h5 class="fw-bold" style="color: black;">Headquarter</h5>
-          <p>OCSMS Pvt Ltd, <br>Sec IV, Bokaro <br>Jharkhand - 834005</p>
-          <p>Phone: +00000000</p>
-          <a href="#" target="_blank" class="text-dark text-decoration-none">www.ocsms.com</a>
+          <p>FixIT Pvt Ltd, <br>Sec IV, Velencia <br>Manglore - 575001</p>
+          <p>Phone: 8660516530 </p>
+          <a href="#" target="_blank" class="text-dark text-decoration-none">www.fixit.com</a>
         </div>
 
-        <!-- Delhi Branch -->
+        <!-- Manipal Branch -->
         <div class="office-info">
-          <h5 class="fw-bold" style="color: black;">Delhi Branch</h5>
-          <p>OCSMS Pvt Ltd, <br>Ashok Nagar, Delhi <br>Delhi - 804002</p>
-          <p>Phone: +00000000</p>
-          <a href="#" target="_blank" class="text-dark text-decoration-none">www.ocsms.com</a>
+          <h5 class="fw-bold" style="color: black;">Manipal Branch</h5>
+          <p>FixIT Pvt Ltd, <br>4th cross, Shanti Nagar  <br>Manipal - 576107</p>
+          <p>Phone: 8618010600 </p>
+          <a href="#" target="_blank" class="text-dark text-decoration-none">www.fixit.com</a>
         </div>
       </div>
     </div>

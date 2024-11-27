@@ -42,66 +42,64 @@ if(isset($_REQUEST['submitrequest'])){
  }
 }
 ?>
-<div class="col-sm-9 col-md-10 mt-5">
-  <h2 class="mb-4 text-center" style="color: #333; font-weight: bold; margin-top: 40px;">Submit Your Request</h2> <!-- Dark heading with margin -->
-  <form class="mx-5 p-4" action="" method="POST" style="background-color: #f7f9f9; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<div class="col-sm-9 col-md-10 mt-5" style="background-color: #e3f2fd; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <h2 class="mb-4 text-center" style="color: #333; font-weight: bold;">Submit Your Request</h2>
+  <form class="mx-5 p-4" action="" method="POST" style="background-color: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
     <div class="form-group">
       <label for="inputRequestInfo">Request Info</label>
-      <input type="text" class="form-control" id="inputRequestInfo" placeholder="Request Info" name="requestinfo" style="background-color: #e3f2fd;">
+      <input type="text" class="form-control" id="inputRequestInfo" placeholder="Request Info" name="requestinfo">
     </div>
     <div class="form-group">
       <label for="inputRequestDescription">Description</label>
-      <input type="text" class="form-control" id="inputRequestDescription" placeholder="Write Description" name="requestdesc" style="background-color: #e3f2fd;">
+      <input type="text" class="form-control" id="inputRequestDescription" placeholder="Write Description" name="requestdesc">
     </div>
     <div class="form-group">
       <label for="inputName">Name</label>
-      <input type="text" class="form-control" id="inputName" placeholder="Name" name="requestername" style="background-color: #e3f2fd;">
+      <input type="text" class="form-control" id="inputName" placeholder="Name" name="requestername">
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputAddress">Address Line 1</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="House No. 123" name="requesteradd1" style="background-color: #e3f2fd;">
+        <input type="text" class="form-control" id="inputAddress" placeholder="House No. 123" name="requesteradd1">
       </div>
       <div class="form-group col-md-6">
         <label for="inputAddress2">Address Line 2</label>
-        <input type="text" class="form-control" id="inputAddress2" placeholder="Railway Colony" name="requesteradd2" style="background-color: #e3f2fd;">
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Railway Colony" name="requesteradd2">
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputCity">City</label>
-        <input type="text" class="form-control" id="inputCity" name="requestercity" style="background-color: #e3f2fd;">
+        <input type="text" class="form-control" id="inputCity" name="requestercity">
       </div>
       <div class="form-group col-md-4">
         <label for="inputState">State</label>
-        <input type="text" class="form-control" id="inputState" name="requesterstate" style="background-color: #e3f2fd;">
+        <input type="text" class="form-control" id="inputState" name="requesterstate">
       </div>
       <div class="form-group col-md-2">
         <label for="inputZip">Zip</label>
-        <input type="text" class="form-control" id="inputZip" name="requesterzip" onkeypress="isInputNumber(event)" style="background-color: #e3f2fd;">
+        <input type="text" class="form-control" id="inputZip" name="requesterzip" onkeypress="isInputNumber(event)">
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputEmail">Email</label>
-        <input type="email" class="form-control" id="inputEmail" name="requesteremail" style="background-color: #e3f2fd;">
+        <input type="email" class="form-control" id="inputEmail" name="requesteremail">
       </div>
       <div class="form-group col-md-2">
         <label for="inputMobile">Mobile</label>
-        <input type="text" class="form-control" id="inputMobile" name="requestermobile" onkeypress="isInputNumber(event)" style="background-color: #e3f2fd;">
+        <input type="text" class="form-control" id="inputMobile" name="requestermobile" onkeypress="isInputNumber(event)">
       </div>
       <div class="form-group col-md-2">
         <label for="inputDate">Date</label>
-        <input type="date" class="form-control" id="inputDate" name="requestdate" style="background-color: #e3f2fd;">
+        <input type="date" class="form-control" id="inputDate" name="requestdate">
       </div>
     </div>
 
-    <!-- Shorter, more attractive buttons -->
     <button type="submit" class="btn btn-danger btn-sm" name="submitrequest" style="width: 140px; padding: 10px 20px; font-size: 14px; border-radius: 5px; text-align: center;">Submit</button>
     <button type="reset" class="btn btn-secondary btn-sm" style="width: 140px; padding: 10px 20px; font-size: 14px; border-radius: 5px; text-align: center;">Reset</button>
   </form>
-  <!-- below msg display if required fill missing or form submitted success or failed -->
   <?php if(isset($msg)) {echo $msg; } ?>
 </div>
 

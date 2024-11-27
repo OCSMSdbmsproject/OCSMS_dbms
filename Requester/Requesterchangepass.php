@@ -33,7 +33,7 @@ if (isset($_REQUEST['passupdate'])) {
 <!-- Styling for the page -->
 <style>
     body {
-        background: #e3f2fd; /* Light blue background */
+        background: #d1e7f7; /* Light blue background for the entire page */
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin: 0;
         padding: 0;
@@ -89,22 +89,21 @@ if (isset($_REQUEST['passupdate'])) {
     }
 
     .btn-update {
-    background: linear-gradient(90deg, #add8e6, #87cefa); /* Light blue gradient background */
-    color: #ffffff;
-    border: none;
-    border-radius: 10px;
-    padding: 12px 25px;
-    margin-top: 25px;
-    font-size: 1.2rem; /* Larger font for button */
-    transition: background 0.3s, box-shadow 0.3s, transform 0.2s ease;
-}
+        background: linear-gradient(90deg, #4169e1, #1e90ff); /* Dark blue gradient background */
+        color: #ffffff;
+        border: none;
+        border-radius: 10px;
+        padding: 12px 25px;
+        margin-top: 25px;
+        font-size: 1.2rem; /* Larger font for button */
+        transition: background 0.3s, box-shadow 0.3s, transform 0.2s ease;
+    }
 
-
-.btn-update:hover {
-    background: linear-gradient(90deg, #4169e1, #1e90ff); /* Slightly darker blue gradient on hover */
-    box-shadow: 0 4px 15px rgba(65, 105, 225, 0.5); /* Adjusted to match the slightly darker blue */
-    transform: scale(1.05); /* Slightly increase the button size */
-}
+    .btn-update:hover {
+        background: linear-gradient(90deg, #5a8dee, #4682b4); /* Slightly lighter blue gradient on hover */
+        box-shadow: 0 4px 15px rgba(65, 105, 225, 0.5); /* Adjusted to match the slightly lighter blue */
+        transform: scale(1.05); /* Slightly increase the button size */
+    }
 
     .alert {
         margin-top: 20px;

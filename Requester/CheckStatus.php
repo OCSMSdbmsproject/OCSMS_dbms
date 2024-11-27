@@ -72,7 +72,7 @@ if($_SESSION['is_login']){
 <style>
   /* Custom CSS */
   body {
-    background-color: #f4f4f9; /* Light background color */
+    background-color: #d8f3fc; /* Light blue background color (same as the profile background) */
   }
 
   .form-control {
@@ -121,6 +121,9 @@ if($_SESSION['is_login']){
     color: #7f7f7f; /* Lighter color for placeholder */
   }
 </style>
+
+
+
 
 <?php
 include('includes/footer.php');

@@ -64,12 +64,45 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Submit Review</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Font Awesome CDN for icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Correct CDN link for Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
+        /* Page Styling */
+        body {
+            background-color: #e6f4ff; /* Light blue background for outer area */
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #ffffff; /* White background for the inner box */
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2575fc;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
         .star-rating {
             display: inline-flex;
-            direction: rtl; /* Make the stars clickable from right to left */
-            font-size: 2em;
+            direction: rtl;
+            font-size: 2.5rem;
+            color: #ddd;
+            cursor: pointer;
+            margin-bottom: 10px;
         }
 
         .star-rating input {
@@ -84,20 +117,90 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         .star-rating input:checked ~ label,
         .star-rating label:hover,
         .star-rating label:hover ~ label {
-            color: #f39c12; /* Gold color for selected stars */
+            color: #ffb400; /* Gold color for stars */
         }
 
         .star-rating label:active {
-            color: #e67e22; /* Slightly darker gold for active state */
+            color: #e67e22;
         }
 
-        .star-rating input:checked + label {
-            color: #f39c12;
+        textarea.form-control {
+            resize: none;
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff; /* Light white background for textarea */
+        }
+
+        input[type="file"] {
+            border: none;
+            background-color: #ffffff; /* Light background for file input */
+            padding: 10px;
+            font-size: 1rem;
+            color: #444;
+            border-radius: 5px;
+        }
+
+        input[type="file"]:focus,
+        textarea.form-control:focus {
+            box-shadow: 0 0 10px rgba(39, 117, 252, 0.6);
+            outline: none;
+        }
+
+        button.btn-primary {
+            background-color: #2575fc;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            color: #fff;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button.btn-primary:hover {
+            background-color: #1f61db;
+            transform: translateY(-3px);
+        }
+
+        .alert {
+            border-radius: 8px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Styling for inputs and textareas to make them pop */
+        .form-control {
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: #2575fc;
+            box-shadow: 0 0 8px rgba(39, 117, 252, 0.5);
+        }
+
+        /* Additional hover effects for the form inputs */
+        .form-control:hover {
+            border-color: #1f61db;
+        }
+
+        /* Styling the file input box */
+        input[type="file"] {
+            background-color: #f0f4f8;
+            border-radius: 5px;
+            padding: 8px;
+        }
+
+        /* Additional hover effects for the file input */
+        input[type="file"]:hover {
+            background-color: #dfe4f1;
         }
     </style>
 </head>
 <body>
-    <div class="container mt-5">
+
+    <div class="container">
         <h2>Submit Your Review</h2>
 
         <!-- Display success or error message -->
@@ -116,14 +219,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <input type="radio" id="star1" name="rating" value="1"><label for="star1"><i class="fas fa-star"></i></label>
                 </div>
             </div>
+
             <div class="form-group">
                 <label for="comment">Comment</label>
                 <textarea name="comment" class="form-control" rows="5" required></textarea>
             </div>
+
             <div class="form-group">
                 <label for="photo">Upload Photo</label>
                 <input type="file" name="photo" class="form-control" accept="image/*">
             </div>
+
             <button type="submit" class="btn btn-primary">Submit Review</button>
         </form>
     </div>
