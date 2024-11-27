@@ -23,67 +23,62 @@
 
 <body>
   <!-- Start Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
-    <div class="container">
-        <a href="index.php" class="navbar-brand text-primary font-weight-bold">
-            <i class="fas fa-tools"></i> FixIT
-        </a>
-        <span class="navbar-text text-muted font-italic d-none d-md-inline">
-        Simplifying Computer Repairs For You
-        </span>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="myMenu">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a href="index.php" class="nav-link text-dark font-weight-bold">
-                        Home
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#Services" class="nav-link text-dark font-weight-bold">
-                        Services
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#registration" class="nav-link text-dark font-weight-bold">
-                        Registration
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="Requester/RequesterLogin.php" class="nav-link text-dark font-weight-bold">
-                        Login
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#Contact" class="nav-link text-dark font-weight-bold">
-                        Contact
-                    </a>
-                </li>
-            </ul>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="container">
+    <a href="index.php" class="navbar-brand text-primary font-weight-bold">
+      FixIT
+    </a>
+    <span class="navbar-text text-muted font-italic d-none d-md-inline">
+      Simplifying Computer Repairs For You
+    </span>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="myMenu">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="index.php" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#Services" class="nav-link">Services</a>
+        </li>
+        <li class="nav-item">
+          <a href="#registration" class="nav-link">Registration</a>
+        </li>
+        <li class="nav-item">
+          <a href="Requester/RequesterLogin.php" class="nav-link">Login</a>
+        </li>
+        <li class="nav-item">
+          <a href="#Contact" class="nav-link">Contact</a>
+        </li>
+      </ul>
     </div>
+  </div>
 </nav>
 <!-- End Navigation -->
 
 
 
-  <!-- Start Header Jumbotron -->
-<header class="jumbotron back-image text-center d-flex flex-column align-items-center justify-content-center" 
-    style="background-image: url('images/b10.jpg'); height: 100vh; background-size: cover; background-position: center; background-color: #e0f7fa;">
-    <div class="mainHeading text-center">
+
+<!-- Start Header Jumbotron -->
+<header class="jumbotron back-image text-center d-flex flex-column align-items-center justify-content-start" 
+    style="background-image: url('images/B13.png'); height: 100vh; background-size: cover; background-position: center; background-color: #e0f7fa;">
+    <div class="mainHeading text-center" 
+        style="position: absolute; top: 40%; right: 10%; transform: translate(0, -50%);">
         <h1 class="display-3 font-weight-bold mb-3" style="color: #004d40; text-shadow: 2px 2px 5px rgba(0,0,0,0.2);">
             Welcome to <span style="color: #26a69a;">FixIT</span>
         </h1>
-        <p class="lead font-italic mb-4" style="color: #004d40; text-shadow: 1px 1px 3px rgba(0,0,0,0.1);">
+        <p class="lead font-italic mb-2" style="color: #004d40; text-shadow: 1px 1px 3px rgba(0,0,0,0.1);">
             SIMPLIFYING COMPUTER REPAIRS FOR YOU
         </p>
+        <p class="slightly-bigger-text" style="color: #004d40; font-size: 1.2rem; margin-bottom: 1.5rem;">
+            Our platform focuses on building trust by delivering<br>consistent and high-quality services tailored to your needs.
+        </p>
         <div class="button-group">
-            <a href="Requester/RequesterLogin.php" class="btn btn-lg btn-success mx-2 px-4 py-2 shadow-lg login-btn">
+            <a href="Requester/RequesterLogin.php" class="btn btn-lg login-btn mx-2 px-4 py-2 shadow-lg">
                 Login
             </a>
-            <a href="#registration" class="btn btn-lg btn-primary mx-2 px-4 py-2 shadow-lg signup-btn">
+            <a href="#registration" class="btn btn-lg signup-btn mx-2 px-4 py-2 shadow-lg">
                 Sign Up
             </a>
         </div>
@@ -97,47 +92,61 @@
 
 
 
-  <div class="container">
-    <!--Introduction Section-->
-    <div class="jumbotron">
-      <h3 class="text-center">FixIT Services</h3>
-      <p class="text-justify">
-      FixIT is a platform dedicated to offering quick and reliable solutions for all your computer-related issues. 
-      Our services connect users with expert technicians to diagnose, troubleshoot, and repair hardware and software problems efficiently.
-       We specialize in system optimization, virus removal, and hardware component repair. 
-       With a user-friendly interface, FixIT ensures seamless communication between users and technicians, enabling fast service delivery. 
-       Our mission is to minimize downtime and maximize customer satisfaction by providing top-notch technical support.
-      </p>
 
+
+
+
+
+  <!-- Start Introduction Section -->
+<div class="container my-5">
+  <div class="jumbotron custom-jumbotron">
+    <h3 class="text-center display-4 custom-heading">FixIT SERVICES</h3>
+    <p class="text-justify custom-text">
+      FixIT is a platform dedicated to offering quick and reliable solutions for all your computer-related issues. 
+      Our services connect users with expert technicians to diagnose, troubleshoot, and repair hardware and software problems efficiently. 
+      We specialize in system optimization, virus removal, and hardware component repair. With a user-friendly interface, FixIT ensures seamless communication between users and technicians, enabling fast service delivery. 
+      Our mission is to minimize downtime and maximize customer satisfaction by providing top-notch technical support. Additionally, we offer tailored maintenance packages to keep your systems running smoothly over the long term. 
+      FixIT also provides 24/7 customer support to address urgent issues anytime. We use advanced diagnostic tools and techniques to ensure accurate and effective repairs. 
+      Trust FixIT to deliver affordable, efficient, and expert solutions for all your tech needs.
+    </p>
+  </div>
+</div>
+<!-- End Introduction Section -->
+
+<!-- Start Services Section -->
+<div class="container text-center border-bottom" id="Services">
+  <h2 class="services-heading">Our Services</h2>
+  <div class="row mt-5">
+    <div class="col-sm-4 mb-4 service-item">
+      <a href="#" class="service-link">
+        <i class="fas fa-tv fa-6x text-primary service-icon"></i>
+      </a>
+      <h4 class="mt-4">Electronic Appliances</h4>
+    </div>
+    <div class="col-sm-4 mb-4 service-item">
+      <a href="#" class="service-link">
+        <i class="fas fa-sliders-h fa-6x text-warning service-icon"></i>
+      </a>
+      <h4 class="mt-4">Preventive Maintenance</h4>
+    </div>
+    <div class="col-sm-4 mb-4 service-item">
+      <a href="#" class="service-link">
+        <i class="fas fa-cogs fa-6x text-success service-icon"></i>
+      </a>
+      <h4 class="mt-4">Fault Repair</h4>
     </div>
   </div>
-  <!--Introduction Section End-->
-  <!-- Start Services -->
-  <div class="container text-center border-bottom" id="Services">
-    <h2>Our Services</h2>
-    <div class="row mt-4">
-      <div class="col-sm-4 mb-4">
-        <a href="#"><i class="fas fa-tv fa-8x text-success"></i></a>
-        <h4 class="mt-4">Electronic Appliances</h4>
-      </div>
-      <div class="col-sm-4 mb-4">
-        <a href="#"><i class="fas fa-sliders-h fa-8x text-primary"></i></a>
-        <h4 class="mt-4">Preventive Maintenance</h4>
-      </div>
-      <div class="col-sm-4 mb-4">
-        <a href="#"><i class="fas fa-cogs fa-8x text-info"></i></a>
-        <h4 class="mt-4">Fault Repair</h4>
-      </div>
-    </div>
-  </div> <!-- End Services -->
+</div>
+<!-- End Services Section -->
 
+<div>
   <!-- Start Registration  -->
   <?php include('userRegistration.php') ?>
   <!-- End Registration  -->
-
+</div>
   <!-- Start Feedback -->
-<div class="container mt-5">
-    <h2 class="text-center mb-4">🌟 Happy Customers 🌟</h2>
+  <div class="container mt-5">
+    <h2 class="text-center mb-4 text-primary">🌟 Happy Customers 🌟</h2>
     <div class="row justify-content-center">
         <?php
         // Fetch top reviews (e.g., top 4 highest-rated)
@@ -151,11 +160,11 @@
         if ($reviewsResult->num_rows > 0) {
             while ($review = $reviewsResult->fetch_assoc()) {
                 echo '<div class="col-md-3 col-sm-6 mb-4">';
-                echo '<div class="card review-card shadow-sm border-0 text-center">';
-
+                echo '<div class="card review-card shadow-lg border-0 text-center">';
+                
                 // Display user photo or default avatar
                 $userPhoto = !empty($review['photo']) ? 'uploads/' . htmlspecialchars($review['photo']) : 'default-avatar.png';
-                echo '<img src="' . $userPhoto . '" class="card-img-top rounded-circle mx-auto mt-3" alt="User Photo" 
+                echo '<img src="' . $userPhoto . '" class="card-img-top rounded-circle mx-auto mt-3 user-photo" alt="User Photo" 
                         style="height: 120px; width: 120px; object-fit: cover; border: 3px solid #f8f9fa;">';
 
                 echo '<div class="card-body">';
@@ -175,36 +184,43 @@
 <!-- End Feedback -->
 
 
-  <!--Start Contact Us-->
-  <div class="container" id="Contact">
-    <!--Start Contact Us Container-->
-    <h2 class="text-center mb-4">Contact Us</h2> <!-- Contact Us Heading -->
-    <div class="row">
 
-      <!--Start Contact Us Row-->
+<div class="container my-5" id="Contact">
+  <div class="row g-4 align-items-start">
+    <!-- Contact Form Column -->
+    <div class="col-md-8">
       <?php include('contactform.php'); ?>
-      <!-- End Contact Us 1st Column -->
+    </div>
 
-      <div class="col-md-4 text-center">
-        <!-- Start Contact Us 2nd Column-->
-        <strong>Headquarter:</strong> <br>
-        OCSMS Pvt Ltd, <br>
-        Sec IV, Bokaro <br>
-        Jharkhand - 834005 <br>
-        Phone: +00000000 <br>
-        <a href="#" target="_blank">www.ocsms.com</a> <br>
+    <!-- Contact Information Column -->
+    <div class="col-md-4">
+      <div class="p-4 rounded shadow" style="background-color: #80deea; color: black;">
+        <h4 class="text-center mb-4" style="color: black;">Our Offices</h4>
 
-        <br><br>
-        <strong>Delhi Branch:</strong> <br>
-        OCSMS Pvt Ltd, <br>
-        Ashok Nagar, Delhi <br>
-        Delhi - 804002 <br>
-        Phone: +00000000 <br>
-        <a href="#" target="_blank">www.ocsms.com</a> <br>
-      </div> <!-- End Contact Us 2nd Column-->
-    </div> <!-- End Contact Us Row-->
-  </div> <!-- End Contact Us Container-->
-  <!-- End Contact Us -->
+        <!-- Headquarter -->
+        <div class="office-info mb-4">
+          <h5 class="fw-bold" style="color: black;">Headquarter</h5>
+          <p>OCSMS Pvt Ltd, <br>Sec IV, Bokaro <br>Jharkhand - 834005</p>
+          <p>Phone: +00000000</p>
+          <a href="#" target="_blank" class="text-dark text-decoration-none">www.ocsms.com</a>
+        </div>
+
+        <!-- Delhi Branch -->
+        <div class="office-info">
+          <h5 class="fw-bold" style="color: black;">Delhi Branch</h5>
+          <p>OCSMS Pvt Ltd, <br>Ashok Nagar, Delhi <br>Delhi - 804002</p>
+          <p>Phone: +00000000</p>
+          <a href="#" target="_blank" class="text-dark text-decoration-none">www.ocsms.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
 
   <!-- Start Footer-->
   <footer class="container-fluid bg-dark text-white mt-5" style="border-top: 3px solid #DC3545;">

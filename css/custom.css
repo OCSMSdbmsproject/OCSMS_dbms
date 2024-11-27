@@ -107,82 +107,348 @@ fi-color:hover {
   transform: scale(1.1);
 }
 
-/* Navbar Background and Effects */
+/* Navbar: Bigger and Stylish */
 .navbar {
-  background-color: #e0f7fa; /* Light Cyan for a fresh look */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #acedf6; /* Retain the light cyan color */
+  padding: 0.9rem 0.6rem; /* Larger padding for a bigger navbar */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add a stronger shadow for depth */
 }
 
-.navbar .navbar-brand {
-  display: flex;
-  align-items: center;
+/* Navbar Brand Styling */
+.navbar-brand {
+  font-size: 2.1rem; /* Larger logo text */
+  font-weight: bold;
+  color: #00796b; /* Teal for contrast */
+  transition: color 0.3s ease-in-out;
 }
 
-.navbar .navbar-brand img {
-  border-radius: 10px; /* Rounded edges for the logo */
-  transition: transform 0.3s ease-in-out;
+.navbar-brand:hover {
+  color: #004d40; /* Slightly darker teal on hover */
 }
 
-.navbar .navbar-brand img:hover {
-  transform: scale(1.1); /* Slight zoom effect on hover */
+/* Navbar Text (Tagline) Styling */
+.navbar-text {
+  font-size: 1.2rem; /* Slightly reduced size for better proportion */
+  color: #616161; /* Neutral gray for tagline */
+  margin-left: 10px; /* Space between logo and tagline */
+  font-style: italic;
 }
 
-/* Link styling for navbar */
-.navbar .nav-link {
-  font-size: 1rem;
+/* Navbar Links Styling */
+.nav-link {
+  font-size: 1.1rem; /* Slightly larger text for links */
+  font-weight: bold;
   color: #004d40; /* Default dark teal for links */
-  font-weight: bold; /* Bold for better readability */
-  transition: color 0.3s ease, background-color 0.3s ease;
+  margin: 0 10px; /* Spacing between links */
+  text-transform: uppercase; /* Make text uppercase for better readability */
+  transition: color 0.3s, background-color 0.3s; /* Smooth hover transitions */
 }
 
-.navbar .nav-link:hover {
-  color: #004d40; /* Keep the text teal for consistency */
-  background-color: #b2dfdb; /* Light mint green for hover effect */
-  border-radius: 5px; /* Smooth rounded effect for hover */
-  padding: 5px 10px; /* Add padding for a button-like hover */
-  text-decoration: none; /* Remove underline on hover */
-}
-
-/* Active state for current page link */
-.navbar .nav-link.active {
-  color: white;
-  background-color: #26a69a; /* Softer green for active state */
-  border-radius: 5px;
-  padding: 5px 10px;
+/* Hover effect for navbar links */
+.nav-link:hover {
+  color: #00796b; /* Softer teal on hover */
+  background-color: rgba(0, 0, 0, 0.05); /* Subtle gray background on hover */
+  padding: 5px 10px; /* Button-like feel on hover */
+  border-radius: 5px; /* Rounded corners */
   text-decoration: none;
 }
 
-/* Login Button Hover Effect */
+/* Navbar Active Link Styling */
+.nav-link.active {
+  color: #ffffff; /* White for active link */
+  background-color: #00796b; /* Teal background for active state */
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Navbar Collapse Toggler (for mobile) */
+.navbar-toggler {
+  border: none; /* Remove default border */
+}
+
+.navbar-toggler-icon {
+  background-image: linear-gradient(90deg, #00796b, #004d40); /* Gradient icon for mobile menu */
+  border-radius: 3px; /* Rounded edges for toggler */
+}
+
+/* Adjust Spacing for Mobile and Larger Screens */
+@media (min-width: 992px) {
+  .navbar-nav .nav-item {
+    margin-left: 20px; /* Spacing between items on larger screens */
+  }
+}
+
+/* Mobile-specific adjustments: Ensuring hover effect works */
+@media (max-width: 991px) {
+  /* Make sure hover works on small screens */
+  .navbar-collapse.show .nav-link:hover {
+    color: #00796b; /* Softer teal on hover */
+    background-color: rgba(0, 0, 0, 0.05); /* Keep the same hover background */
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  /* Adjust the mobile navbar for smoother display */
+  .navbar-collapse {
+    padding-top: 10px; /* Give some padding inside collapse to avoid crowding */
+  }
+
+  /* Optional: If you want the navbar-toggler icon to have a bigger area to click */
+  .navbar-toggler {
+    padding: 8px; /* Increase click area for better usability on mobile */
+  }
+
+  .navbar-toggler-icon {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+
+
+
+/* Common Button Styling */
+.btn {
+  border: none;
+  color: white;
+  padding: 10px 30px; /* Consistent padding for better size */
+  font-size: 1.1rem; /* Slightly larger font size for better readability */
+  font-weight: bold; /* Make text bold */
+  border-radius: 30px; /* Rounded corners for smooth edges */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Login Button Styling */
 .login-btn {
-    background-color: #4caf50;
-    border: none;
-    color: white;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #4caf50; /* Green color for login button */
 }
 
 .login-btn:hover {
-    background-color: #388e3c; /* Darker green on hover */
-    transform: scale(1.05); /* Slight zoom effect */
+  background-color: #388e3c; /* Darker green on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
 }
 
-/* Sign Up Button Hover Effect */
+/* Sign Up Button Styling */
 .signup-btn {
-    background-color: #2196f3;
-    border: none;
-    color: white;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #2196f3; /* Blue color for signup button */
 }
 
 .signup-btn:hover {
-    background-color: #1976d2; /* Darker blue on hover */
-    transform: scale(1.05); /* Slight zoom effect */
+  background-color: #1976d2; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+}
+
+/* Main Heading Adjustments */
+.mainHeading {
+  position: absolute;
+  top: 40%;
+  right: 10%;
+  transform: translate(0, -50%);
+  text-align: center;
+}
+
+/* Optional: Update button spacing for better alignment */
+.button-group .btn {
+  margin: 0.5rem; /* Consistent spacing */
+}
+
+/* General improvements for responsiveness */
+@media (max-width: 768px) {
+  .mainHeading {
+      top: 55%; /* Slightly lower for smaller screens */
+      right: 5%; /* Reduce right padding on smaller screens */
+  }
+  .mainHeading h1 {
+      font-size: 2rem; /* Reduce font size for smaller devices */
+  }
+  .mainHeading p {
+      font-size: 1rem; /* Adjust subtitle size */
+  }
 }
 
 
-/* Setting Margin and Alignment for Welcome to OSM Mobile View */
+
 @media only screen and (max-width: 600px) {
   .myclass {
-    margin-top: 350px;
+    margin-top: 400px; /* Increased margin to push the text further down */
     text-align: center;
   }
 }
+
+/* Custom Jumbotron Styling */
+.custom-jumbotron {
+  background-color: #f4f4f9; /* Light background for the jumbotron */
+  padding: 3rem; /* Increased padding for a spacious look */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.custom-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00796b;
+  letter-spacing: 1px;
+}
+
+.custom-text {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+  padding: 1rem 0;
+}
+
+/* Services Section Styling */
+.services-heading {
+  font-size: 2.5rem;
+  color: #00796b;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.service-item {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-10px); /* Slight lift effect on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+}
+
+.service-link {
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.service-link:hover .service-icon {
+  transform: scale(1.1); /* Slight zoom effect on icon */
+}
+
+.service-icon {
+  transition: transform 0.3s ease;
+}
+
+.service-item h4 {
+  font-size: 1.3rem;
+  color: #00796b;
+  margin-top: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.service-item h4:hover {
+  color: #004d40;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .service-item {
+    margin-bottom: 30px;
+  }
+  
+  .service-icon {
+    font-size: 5rem;
+  }
+}
+
+/* Container Styling */
+#registration {
+  background: linear-gradient(to right, #e0f7fa, #80deea); /* Gradient background */
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* Card Styling */
+.card {
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  background-color: #ffffff;
+  padding: 2rem;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+/* Form Inputs Styling */
+.form-group input {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Input shadow */
+  transition: box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+  box-shadow: 0 0 12px rgba(0, 128, 255, 0.6); /* Focus effect */
+  border-color: #00796b; /* Border color when focused */
+}
+
+.form-group i {
+  color: #00796b;
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: #00796b;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #004d40;
+  transform: translateY(-2px); /* Button lift effect */
+}
+
+.btn-primary:active {
+  transform: translateY(2px); /* Button press effect */
+}
+
+/* Customizing Alert Messages */
+.alert {
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.alert-warning {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.alert-success {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.alert-danger {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+    margin-top: 30px;
+  }
+  .btn-primary {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+  }
+}
+
+
+
