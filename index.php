@@ -28,9 +28,9 @@
     <a href="index.php" class="navbar-brand text-primary font-weight-bold">
       FixIT
     </a>
-    <span class="navbar-text text-muted font-italic d-none d-md-inline">
-      Simplifying Computer Repairs For You
-    </span>
+    <span class="navbar-text text-muted font-italic" style="white-space: nowrap;">
+  Simplifying Computer Repairs For You
+</span>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myMenu">
       <span class="navbar-toggler-icon"></span>
     </button>

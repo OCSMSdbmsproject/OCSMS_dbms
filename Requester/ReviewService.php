@@ -37,12 +37,12 @@ $serviceResult = $stmt->get_result();
 ?>
 
 <!-- Full Page Background with Light Lavender-Blue -->
-<div style="background-color: #eef2f3; height: 100vh; display: flex; justify-content: flex-end; align-items: center; padding-right: 5%;">
+<div class="center-wrapper" style="background-color: #eef2f3; height: 100vh; display: flex; justify-content: center; align-items: center;">
     <!-- Center-Aligned Container with Subtle Aesthetic Colors -->
-    <div class="container" style="background-color: #dcdff1; padding: 40px; border-radius: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); width: 90%; max-width: 900px; min-height: 600px; display: flex; flex-direction: column; align-items: center;">
+    <div class="container" style="background-color: #dcdff1; padding: 40px; border-radius: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); width: 90%; max-width: 700px;">
         <div style="width: 100%; text-align: center;">
             <h3 style="color: #333333; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold;">Your Service Requests</h3>
-            <table class="table table-bordered" style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 0 auto;">
+            <table class="table table-bordered" style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 20px auto; width: 100%; max-width: 650px;">
                 <thead style="background-color: #a9b8e6; color: #333333; font-weight: bold;">
                     <tr style="text-align: center;">
                         <th>Request ID</th>
@@ -87,5 +87,6 @@ $serviceResult = $stmt->get_result();
         </div>
     </div>
 </div>
+
 
 <?php include('includes/footer.php'); ?>

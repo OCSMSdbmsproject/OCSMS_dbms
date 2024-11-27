@@ -89,21 +89,22 @@ if (isset($_REQUEST['passupdate'])) {
     }
 
     .btn-update {
-        background: linear-gradient(90deg, #6c63ff, #ff7eb3); /* Gradient background */
-        color: #ffffff;
-        border: none;
-        border-radius: 10px;
-        padding: 12px 25px;
-        margin-top: 25px;
-        font-size: 1.2rem; /* Larger font for button */
-        transition: background 0.3s, box-shadow 0.3s, transform 0.2s ease;
-    }
+    background: linear-gradient(90deg, #add8e6, #87cefa); /* Light blue gradient background */
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 25px;
+    margin-top: 25px;
+    font-size: 1.2rem; /* Larger font for button */
+    transition: background 0.3s, box-shadow 0.3s, transform 0.2s ease;
+}
 
-    .btn-update:hover {
-        background: linear-gradient(90deg, #ff7eb3, #6c63ff); /* Reversed gradient on hover */
-        box-shadow: 0 4px 15px rgba(108, 99, 255, 0.5);
-        transform: scale(1.05); /* Slightly increase the button size */
-    }
+
+.btn-update:hover {
+    background: linear-gradient(90deg, #4169e1, #1e90ff); /* Slightly darker blue gradient on hover */
+    box-shadow: 0 4px 15px rgba(65, 105, 225, 0.5); /* Adjusted to match the slightly darker blue */
+    transform: scale(1.05); /* Slightly increase the button size */
+}
 
     .alert {
         margin-top: 20px;
@@ -114,10 +115,6 @@ if (isset($_REQUEST['passupdate'])) {
         transform: scale(1.02); /* Slight scale effect when the button is clicked */
     }
 </style>
-
-
-
-
 
 <!-- Form Design -->
 <div class="form-container">

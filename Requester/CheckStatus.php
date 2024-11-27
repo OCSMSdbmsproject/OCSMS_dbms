@@ -92,7 +92,7 @@ if($_SESSION['is_login']){
   }
 
   .custom-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #87CEEB; /* Darker blue on hover */
   }
 
   .alert {
@@ -125,56 +125,5 @@ if($_SESSION['is_login']){
 <?php
 include('includes/footer.php');
 ?>
-<style>
-  /* Custom CSS */
-  body {
-    background-color: #f4f4f9; /* Light background color */
-  }
 
-  .form-control {
-    width: 75%; /* Adjust input width */
-    font-size: 18px; /* Increase font size of input */
-    border-radius: 8px;
-  }
-
-  .custom-button {
-    background-color: #004085; /* Dark blue color for search button */
-    color: white; /* White text */
-    border: none;
-    font-size: 18px; /* Increase font size of button */
-    border-radius: 8px;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
-  }
-
-  .custom-button:hover {
-    background-color: #003366; /* Even darker blue on hover */
-  }
-
-  .alert {
-    background-color: #f9f9f9;
-    border-color: #d6d6d6;
-  }
-
-  .table-bordered {
-    border: 2px solid #ddd;
-  }
-
-  .table td {
-    padding: 10px;
-    font-size: 16px;
-  }
-
-  .form-inline {
-    margin-top: 300px; /* Increased margin-top for more space from navbar */
-  }
-
-  .form-group label {
-    font-size: 20px; /* Increase font size of label */
-  }
-
-  .form-control::placeholder {
-    color: #7f7f7f; /* Lighter color for placeholder */
-  }
-</style>
 
