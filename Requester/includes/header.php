@@ -19,10 +19,61 @@
 </head>
 
 <body>
- <!-- Top Navbar -->
- <nav class="navbar navbar-dark fixed-top bg-danger flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="RequesterProfile.php">OCSMS</a>
- </nav>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #acedf6; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+  <div class="container d-flex align-items-center" style="padding-left: 0;">
+    <!-- Brand Name and Tagline Together -->
+    <a href="index.php" class="navbar-brand d-flex align-items-center text-primary font-weight-bold" style="font-size: 1.8rem; letter-spacing: 1px;">
+      <i style="margin-left: -350px;"></i>
+      <span>FixIT</span>
+      <span class="text-muted ml-2 font-italic" style="font-size: 1rem;">- Simplifying Computer Repairs For You</span>
+    </a>
+  </div>
+</nav>
+
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #acedf6; /* Light blue background */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures content aligns properly */
+    padding: 15px 30px; /* Increases padding for larger navbar */
+    height: 80px; /* Slightly increases height */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand {
+    font-size: 28px; /* Larger font for the brand name */
+    font-weight: bold;
+    color: #007bff; /* Blue color */
+    margin: 0;
+}
+
+.tagline {
+    font-size: 16px; /* Slightly larger tagline text */
+    font-style: italic;
+    color: #555; /* Gray color for tagline */
+    margin-top: 5px;
+}
+@media (min-width: 992px) {
+  .navbar-nav .nav-item {
+    margin-left: 20px; /* Spacing between items on larger screens */
+  }
+}
+
+
+</style>
+
+
 
  <!-- Side Bar -->
  <div class="container-fluid mb-5 " style="margin-top:40px;">

@@ -135,30 +135,39 @@ fi-color:hover {
 }
 
 /* Navbar Links Styling */
+/* General Styling for Navbar Links */
+/* General Styling for Navbar Links */
 .nav-link {
   font-size: 1.1rem; /* Slightly larger text for links */
   font-weight: bold;
-  color: #004d40; /* Default dark teal for links */
-  margin: 0 10px; /* Spacing between links */
-  text-transform: uppercase; /* Make text uppercase for better readability */
-  transition: color 0.3s, background-color 0.3s; /* Smooth hover transitions */
+  color: #000000; /* Default dark color for links */
+  margin: 0 15px; /* Increased spacing between links */
+  text-transform: uppercase; /* Uppercase text for better readability */
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease; /* Smooth hover transitions */
+  padding: 12px 18px; /* Increased padding for more spacious links */
+  border-radius: 30px; /* Rounded corners for a soft feel */
+  background-color: rgba(255, 255, 255, 0.8); /* Subtle background with opacity */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
 }
 
-/* Hover effect for navbar links */
+/* Hover Effect for Navbar Links */
 .nav-link:hover {
-  color: #00796b; /* Softer teal on hover */
-  background-color: rgba(0, 0, 0, 0.05); /* Subtle gray background on hover */
-  padding: 5px 10px; /* Button-like feel on hover */
-  border-radius: 5px; /* Rounded corners */
+  color: #ffffff; /* White color for text on hover */
+  background-color: #26dbe1; /* Teal background on hover */
+  padding: 12px 18px; /* Larger padding on hover for better interaction */
+  transform: translateY(-4px); /* Slight elevation effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow for hover */
   text-decoration: none;
 }
 
 /* Navbar Active Link Styling */
 .nav-link.active {
-  color: #ffffff; /* White for active link */
-  background-color: #00796b; /* Teal background for active state */
-  padding: 5px 10px;
-  border-radius: 5px;
+  color: #ffffff; /* White text for active link */
+  background-color: #26dbe1; /* Teal background for active link */
+  padding: 12px 18px; /* Consistent padding for active link */
+  border-radius: 30px; /* Rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow for active state */
   text-decoration: none;
 }
 
@@ -169,8 +178,29 @@ fi-color:hover {
 
 .navbar-toggler-icon {
   background-image: linear-gradient(90deg, #00796b, #004d40); /* Gradient icon for mobile menu */
-  border-radius: 3px; /* Rounded edges for toggler */
+  border-radius: 4px; /* Rounded edges for the toggler */
+  padding: 8px; /* Increased padding to make the toggler easier to click */
+  transition: background 0.3s ease, transform 0.3s ease; /* Smooth transitions for toggler */
 }
+
+.navbar-toggler:hover {
+  transform: rotate(90deg); /* Subtle rotation effect when toggler is hovered */
+  background-color: #00796b; /* Softer background on hover */
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    text-align: center; /* Centering links on mobile */
+  }
+
+  .nav-link {
+    margin: 10px 0; /* Stack the links vertically */
+    padding: 12px 20px; /* Bigger padding for easier clicking */
+    background-color: rgba(255, 255, 255, 0.9); /* Light background on mobile */
+  }
+}
+
 
 /* Adjust Spacing for Mobile and Larger Screens */
 @media (min-width: 992px) {
