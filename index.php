@@ -98,7 +98,7 @@
 
 
   <!-- Start Introduction Section -->
-<div class="container my-5">
+<div class="container my-5" id="Services">
   <div class="jumbotron custom-jumbotron">
     <h3 class="text-center display-4 custom-heading">FixIT SERVICES</h3>
     <p class="text-justify custom-text">
@@ -114,8 +114,7 @@
 <!-- End Introduction Section -->
 
 <!-- Start Services Section -->
-<div class="container text-center border-bottom" id="Services">
-  <h2 class="services-heading">Our Services</h2>
+<div class="container text-center border-bottom" >
   <div class="row mt-5">
     <div class="col-sm-4 mb-4 service-item">
       <a href="#" class="service-link">
@@ -223,30 +222,38 @@
 
 
   <!-- Start Footer-->
-  <footer class="container-fluid bg-dark text-white mt-5" style="border-top: 3px solid #DC3545;">
-    <div class="container">
-      <!-- Start Footer Container -->
-      <div class="row py-3">
-        <!-- Start Footer Row -->
-        <div class="col-md-6">
-          <!-- Start Footer 1st Column -->
-          <span class="pr-2">Follow Us: </span>
-          <a href="#" target="_blank" class="pr-2 fi-color"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" target="_blank" class="pr-2 fi-color"><i class="fab fa-twitter"></i></a>
-          <a href="#" target="_blank" class="pr-2 fi-color"><i class="fab fa-youtube"></i></a>
-          <a href="#" target="_blank" class="pr-2 fi-color"><i class="fab fa-google-plus-g"></i></a>
-          <a href="#" target="_blank" class="pr-2 fi-color"><i class="fas fa-rss"></i></a>
-        </div> <!-- End Footer 1st Column -->
+<footer class="container-fluid bg-dark text-white mt-5" style="border-top: 3px solid #DC3545;">
+  <div class="container" style="max-width: 1100px;"> <!-- Adjusted max-width -->
+    <!-- Start Footer Container -->
+    <div class="row py-4">
+      <!-- Start Footer Row -->
+      
+      <!-- Footer Column 1: Social Media Links -->
+      <div class="col-md-6">
+        <div class="d-flex align-items-center">
+          <span class="mr-3" style="font-weight: bold; font-size: 1.1rem;">Follow Us:</span>
+          <a href="#" target="_blank" class="social-icon pr-3"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" target="_blank" class="social-icon pr-3"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank" class="social-icon pr-3"><i class="fab fa-youtube"></i></a>
+          <a href="#" target="_blank" class="social-icon pr-3"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" target="_blank" class="social-icon pr-3"><i class="fab fa-github"></i></a>
+        </div>
+      </div> <!-- End Footer Column 1 -->
 
-        <div class="col-md-6 text-right">
-          <!-- Start Footer 2nd Column -->
-          <small> Designed by DBMS team &copy; 2024.
-          </small>
-          <small class="ml-2"><a href="Admin/login.php">Admin Login</a></small>
-        </div> <!-- End Footer 2nd Column -->
-      </div> <!-- End Footer Row -->
-    </div> <!-- End Footer Container -->
-  </footer> <!-- End Footer -->
+      <!-- Footer Column 2: Footer Text & Admin Login -->
+      <div class="col-md-6 text-md-right text-center mt-3 mt-md-0" style="white-space: nowrap;">
+        <small style="font-size: 0.9rem; opacity: 0.8;">Designed by DBMS team &copy; 2024</small>
+        <small class="ml-2">
+          <a href="Admin/login.php" class="text-white admin-login-btn" style="text-decoration: none;">
+            Admin Login
+          </a>
+        </small>
+      </div> <!-- End Footer Column 2 -->
+    </div> <!-- End Footer Row -->
+  </div> <!-- End Footer Container -->
+</footer> <!-- End Footer -->
+
+
 
   <!-- Boostrap JavaScript -->
   <script src="js/jquery.min.js"></script>

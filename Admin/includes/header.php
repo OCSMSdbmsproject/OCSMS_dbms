@@ -78,7 +78,7 @@
  <!-- Side Bar -->
  <div class="container-fluid mb-5" style="margin-top:40px;">
   <div class="row">
-   <nav class="col-sm-3 col-md-2 bg-light sidebar py-5 d-print-none">
+   <nav class="col-sm-3 col-md-2  sidebar py-5 d-print-none">
     <div class="sidebar-sticky">
      <ul class="nav flex-column">
       <li class="nav-item">

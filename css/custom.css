@@ -480,5 +480,45 @@ fi-color:hover {
   }
 }
 
+/* Social Media Icons styling */
+.social-icon {
+  font-size: 1.5rem;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #DC3545; /* Change color to red on hover */
+}
+
+/* Admin Login button styling */
+.admin-login-btn {
+  font-size: 1rem;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.admin-login-btn:hover {
+  color: #DC3545; /* Change text color to red */
+  text-decoration: underline; /* Optional: adds an underline on hover */
+  opacity: 1; /* Increase opacity on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Footer container adjustment for width */
+footer .container {
+  max-width: 1100px; /* Adjust the max-width to make the footer slightly smaller */
+  margin: 0 auto; /* Center the footer */
+}
+
+
+
+/* Responsive Styling */
+@media (max-width: 767px) {
+  footer .text-md-right {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
 
 

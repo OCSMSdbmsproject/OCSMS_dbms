@@ -37,7 +37,6 @@ $serviceResult = $stmt->get_result();
 ?>
 
 <!-- Full Page Background with Light Lavender-Blue -->
-<div class="center-wrapper" style="background-color: #eef2f3; height: 100vh; display: flex; justify-content: center; align-items: center;">
     <!-- Center-Aligned Container with Subtle Aesthetic Colors -->
     <div class="container" style="background-color: #dcdff1; padding: 40px; border-radius: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); width: 90%; max-width: 700px;">
         <div style="width: 100%; text-align: center;">
@@ -86,7 +85,6 @@ $serviceResult = $stmt->get_result();
             </table>
         </div>
     </div>
-</div>
 
 
 <?php include('includes/footer.php'); ?>
