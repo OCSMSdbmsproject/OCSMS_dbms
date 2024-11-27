@@ -36,51 +36,56 @@ $stmt->execute();
 $serviceResult = $stmt->get_result();
 ?>
 
-<div class="container mt-5">
-    <h3 class="text-center">Your Service Requests</h3>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Request ID</th>
-                <th>Service Info</th>
-                <th>Technician</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            if ($serviceResult->num_rows > 0) {
-                while ($serviceRow = $serviceResult->fetch_assoc()) {
-                    // Check if a review already exists for this service securely
-                    $serviceId = $serviceRow['request_id'];
-                    $reviewCheckSql = "SELECT review_id FROM reviews_tb WHERE service_id = ? AND user_id = ?";
-                    $reviewStmt = $conn->prepare($reviewCheckSql);
-                    $reviewStmt->bind_param("ii", $serviceId, $userId);
-                    $reviewStmt->execute();
-                    $reviewCheckResult = $reviewStmt->get_result();
-                    $hasReview = $reviewCheckResult->num_rows > 0;
+<!-- Full Page Background with Light Lavender-Blue -->
+<div style="background-color: #eef2f3; height: 100vh; display: flex; justify-content: flex-end; align-items: center; padding-right: 5%;">
+    <!-- Center-Aligned Container with Subtle Aesthetic Colors -->
+    <div class="container" style="background-color: #dcdff1; padding: 40px; border-radius: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); width: 90%; max-width: 900px; min-height: 600px; display: flex; flex-direction: column; align-items: center;">
+        <div style="width: 100%; text-align: center;">
+            <h3 style="color: #333333; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold;">Your Service Requests</h3>
+            <table class="table table-bordered" style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 0 auto;">
+                <thead style="background-color: #a9b8e6; color: #333333; font-weight: bold;">
+                    <tr style="text-align: center;">
+                        <th>Request ID</th>
+                        <th>Service Info</th>
+                        <th>Technician</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    if ($serviceResult->num_rows > 0) {
+                        while ($serviceRow = $serviceResult->fetch_assoc()) {
+                            // Check if a review already exists for this service securely
+                            $serviceId = $serviceRow['request_id'];
+                            $reviewCheckSql = "SELECT review_id FROM reviews_tb WHERE service_id = ? AND user_id = ?";
+                            $reviewStmt = $conn->prepare($reviewCheckSql);
+                            $reviewStmt->bind_param("ii", $serviceId, $userId);
+                            $reviewStmt->execute();
+                            $reviewCheckResult = $reviewStmt->get_result();
+                            $hasReview = $reviewCheckResult->num_rows > 0;
 
-                    // Display service request data in the table
-                    echo "<tr>";
-                    echo "<td>" . htmlspecialchars($serviceRow['request_id']) . "</td>";
-                    echo "<td>" . htmlspecialchars($serviceRow['request_desc']) . "</td>";
-                    echo "<td>" . htmlspecialchars($serviceRow['assign_tech']) . "</td>";
-                    // echo "<td>" . htmlspecialchars($serviceRow['rno']) . "</td>";
-                    echo "<td>";
-                    if ($hasReview) {
-                        echo "<button class='btn btn-secondary btn-sm' disabled>Review Submitted</button>";
+                            // Display service request data in the table
+                            echo "<tr style='text-align: center;'>";
+                            echo "<td style='color: #333333;'>" . htmlspecialchars($serviceRow['request_id']) . "</td>";
+                            echo "<td style='color: #333333;'>" . htmlspecialchars($serviceRow['request_desc']) . "</td>";
+                            echo "<td style='color: #333333;'>" . htmlspecialchars($serviceRow['assign_tech']) . "</td>";
+                            echo "<td>";
+                            if ($hasReview) {
+                                echo "<button class='btn btn-secondary btn-sm' disabled>Review Submitted</button>";
+                            } else {
+                                echo "<a href='SubmitReview.php?service_id=" . urlencode($serviceId) . "' class='btn btn-success btn-sm' style='background-color: #8a86c8; border-color: #8a86c8;'>Leave Review</a>";
+                            }
+                            echo "</td>";
+                            echo "</tr>";
+                        }
                     } else {
-                        echo "<a href='SubmitReview.php?service_id=" . urlencode($serviceId) . "' class='btn btn-success btn-sm'>Leave Review</a>";
+                        echo "<tr><td colspan='4' class='text-center' style='color: #333333;'>No Service Requests Found</td></tr>";
                     }
-                    echo "</td>";
-                    echo "</tr>";
-                }
-            } else {
-                echo "<tr><td colspan='5' class='text-center'>No Service Requests Found</td></tr>";
-            }
-            ?>
-        </tbody>
-    </table>
+                    ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 
 <?php include('includes/footer.php'); ?>
