@@ -8,7 +8,6 @@ if(!isset($_SESSION['is_login'])){
     $sql = "SELECT r_email, r_password FROM requesterlogin_tb WHERE r_email='".$rEmail."' AND r_password='".$rPassword."' limit 1";
     $result = $conn->query($sql);
     if($result->num_rows == 1){
-      
       $_SESSION['is_login'] = true;
       $_SESSION['rEmail'] = $rEmail;
       // Redirecting to RequesterProfile page on Correct Email and Pass
@@ -22,7 +21,6 @@ if(!isset($_SESSION['is_login'])){
   echo "<script> location.href='RequesterProfile.php'; </script>";
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,142 +35,156 @@ if(!isset($_SESSION['is_login'])){
   <!-- Font Awesome CSS -->
   <link rel="stylesheet" href="../css/all.min.css">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
   <style>
+    /* Background Styling */
     body {
-      background-color: #f2f4f8;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .login-container {
+      background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Light blue gradient */
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      padding: 20px;
+      margin: 0;
     }
 
-    .login-card {
-      background: linear-gradient(145deg, #80deea, #26a69a);
-      border-radius: 20px;
-      box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
-      padding: 40px;
-      width: 100%;
-      max-width: 500px; /* Increased width */
-      transform: scale(1);
-      transition: transform 0.3s ease;
-    }
-
-    .login-card:hover {
-      transform: scale(1.05); /* Slight zoom effect on hover */
-    }
-
-    .login-card h1 {
-      color: #fff;
-      font-size: 36px;
-      margin-bottom: 30px; /* Increased margin */
-      text-align: center;
-      font-weight: 600;
-    }
-
-    .login-card .form-group label {
-      color: #fff;
-      font-weight: 600;
-    }
-
-    .login-card .form-control {
+    /* Login Box Styling */
+    .form-container {
+      background: linear-gradient(135deg, #ffffff, #e0f7fa); /* Light and attractive gradient */
       border-radius: 12px;
-      padding: 14px 18px;
-      font-size: 16px;
+      padding: 40px 35px;
+      box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 450px;
+      transition: all 0.3s ease;
+    }
+
+    .form-container:hover {
+      box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Requester Login Heading */
+    .form-title {
+      color: #006064; /* Deep teal */
+      font-size: 28px;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    /* Input Fields */
+    .form-group {
+      position: relative;
       margin-bottom: 20px;
     }
 
-    .login-card .btn {
-      background-color: #004d40;
-      color: #fff;
-      border-radius: 12px;
-      padding: 14px;
+    .form-group i {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      font-size: 18px;
+      color: #006064;
+    }
+
+    .form-control {
+      padding-left: 40px;
+      border-radius: 30px;
+      border: 1px solid #80deea;
+      transition: all 0.3s ease;
+      height: 45px;
+    }
+
+    .form-control:focus {
+      border-color: #80deea;
+      box-shadow: 0 0 8px rgba(128, 222, 234, 0.5);
+    }
+
+    /* Buttons */
+    .btn-login {
+      background-color: #80deea; /* Specified button color */
+      color: white;
       font-weight: bold;
+      border-radius: 30px;
+      padding: 12px;
       width: 100%;
-      transition: background-color 0.3s, transform 0.3s ease;
+      border: none;
+      text-transform: uppercase;
+      transition: background 0.3s ease, transform 0.3s ease;
     }
 
-    .login-card .btn:hover {
-      background-color: #00796b;
-      transform: translateY(-2px); /* Subtle raise on hover */
+    .btn-login:hover {
+      background-color: #4bacb8; /* Hover effect */
+      transform: translateY(-3px);
     }
 
-    .login-card .btn-back {
+    .btn-info {
       background-color: #80deea;
-      border-radius: 12px;
-      padding: 14px;
+      color: white;
       font-weight: bold;
-      text-align: center;
+      border-radius: 30px;
+      padding: 12px;
       width: 100%;
-      transition: background-color 0.3s, transform 0.3s ease;
-    }
-
-    .login-card .btn-back:hover {
-      background-color: #26a69a;
-      transform: translateY(-2px); /* Subtle raise on hover */
-    }
-
-    .login-logo {
+      border: none;
+      margin-top: 20px;
       text-align: center;
-      font-size: 40px;
-      color: #004d40;
-      margin-bottom: 30px;
+      transition: background-color 0.3s ease;
     }
 
-    .login-logo i {
-      font-size: 60px;
+    .btn-info:hover {
+      background-color: #4bacb8;
     }
 
-    .alert {
-      font-size: 14px;
-      padding: 10px;
-      margin-top: 15px;
+    /* Lock Icon Styling */
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
     }
 
+    .logo i {
+      font-size: 360px; /* Increased icon size to 360px (2 times bigger) */
+      color: #006064; /* Match color to the heading */
+    }
   </style>
 
-  <title>Login</title>
+  <title>Requester Login</title>
 </head>
 
 <body>
-  <div class="login-container">
-    <div class="login-card shadow-lg">
-      <!-- Logo Section -->
-      <div class="login-logo mb-4">
-      <i class="fas fa-lock"></i>
-        <div>Online Maintenance Management System</div>
-      </div>
+  <div class="container text-center">
+    <!-- Login-related Logo (Lock Icon) -->
+    <div class="logo">
+      <i class="fas fa-lock"></i> <!-- Font Awesome lock icon -->
+    </div>
 
-      <!-- Requester Login Form -->
-      <form action="" method="POST">
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" class="form-control" placeholder="Email" name="rEmail" required>
-          <small class="form-text">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group">
-          <label for="pass">Password</label>
-          <input type="password" class="form-control" placeholder="Password" name="rPassword" required>
-        </div>
-        <button type="submit" class="btn mt-3">Login</button>
-        <?php if(isset($msg)) {echo $msg; } ?>
-      </form>
+    <!-- Requester Login Heading -->
+    <h2 class="form-title">Requester Login</h2>
+    <div class="row justify-content-center">
+      <div class="col-sm-6 col-md-4">
+        <div class="form-container">
+          <form action="" method="POST">
+            <div class="form-group">
+              <i class="fas fa-user"></i>
+              <label for="rEmail" class="pl-2 font-weight-bold">Email</label>
+              <input type="email" class="form-control" placeholder="Enter your email" name="rEmail" required>
+            </div>
 
-      <!-- Back to Home Button -->
-      <div class="text-center mt-3">
-        <a class="btn btn-back" href="../index.php">Back to Home</a>
+            <div class="form-group">
+              <i class="fas fa-key"></i>
+              <label for="rPassword" class="pl-2 font-weight-bold">Password</label>
+              <input type="password" class="form-control" placeholder="Enter your password" name="rPassword" required>
+            </div>
+
+            <button type="submit" class="btn btn-login shadow-sm">Login</button>
+            <?php if(isset($msg)) {echo $msg; } ?>
+          </form>
+
+          <a href="../index.php" class="btn btn-info shadow-sm">Back to Home</a>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Boostrap JavaScript -->
+  <!-- Bootstrap JavaScript -->
   <script src="../js/jquery.min.js"></script>
   <script src="../js/popper.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
@@ -180,3 +192,17 @@ if(!isset($_SESSION['is_login'])){
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -10,7 +10,6 @@ if(!isset($_SESSION['is_adminlogin'])){
     if($result->num_rows == 1){
       $_SESSION['is_adminlogin'] = true;
       $_SESSION['aEmail'] = $aEmail;
-      // Redirecting to Admin Dashboard on correct email and password
       echo "<script> location.href='dashboard.php'; </script>";
       exit;
     } else {
@@ -36,42 +35,57 @@ if(!isset($_SESSION['is_adminlogin'])){
   <link rel="stylesheet" href="../css/all.min.css">
 
   <style>
-    /* Simple Background (No Color) */
     body {
-      background-color: #f8f9fa;
+      background: linear-gradient(135deg, #c2e9fb 0%, #a1c4fd 100%); /* Soft gradient background */
+      height: 100vh;
+      margin: 0;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
+      font-family: 'Arial', sans-serif;
     }
 
-    /* Styling for the Login Box */
     .form-container {
-      background-color: #ffffff;
-      border-radius: 12px;
+      background-color: #ffffff; /* White background for the form */
+      border-radius: 15px;
       padding: 40px 35px;
-      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
       width: 100%;
       max-width: 400px;
-      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
     }
 
-    /* Hover effect for the Login Box */
     .form-container:hover {
-      box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
       transform: translateY(-5px);
     }
 
     .form-container h2 {
-      color: #2c3e50;
-      font-size: 32px;
+      color: #4f8aff; /* Gradient light blue color for the heading */
+      font-size: 48px; /* Larger and more bold */
       text-align: center;
       margin-bottom: 30px;
-      font-weight: 700;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background: linear-gradient(135deg, #ff6f61, #f7b42c); /* Gradient text */
+      -webkit-background-clip: text;
+      color: transparent;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+      animation: fadeIn 1.5s ease-in-out;
     }
 
-    /* Label and Input Fields */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     .form-group {
       position: relative;
       margin-bottom: 25px;
@@ -81,30 +95,29 @@ if(!isset($_SESSION['is_adminlogin'])){
       position: absolute;
       top: 12px;
       left: 12px;
-      font-size: 18px;
-      color: #00796b;
+      font-size: 20px;
+      color: #2d9cdb;
     }
 
     .form-control {
       padding-left: 40px;
-      border-radius: 30px;
-      border: 1px solid #00796b;
-      transition: all 0.3s ease;
+      border-radius: 25px;
+      border: 1px solid #2d9cdb;
       height: 45px;
+      transition: all 0.3s ease;
     }
 
     .form-control:focus {
-      border-color: #004d40;
-      box-shadow: 0 0 8px rgba(0, 77, 64, 0.5);
+      border-color: #1c6f8c;
+      box-shadow: 0 0 8px rgba(28, 111, 140, 0.5);
     }
 
-    /* Login Button */
     .btn-login {
-      background-color: #00796b;
+      background-color: #2d9cdb; /* Light blue for the login button */
       color: white;
       font-weight: bold;
       border-radius: 30px;
-      padding: 12px;
+      padding: 14px;
       width: 100%;
       border: none;
       text-transform: uppercase;
@@ -112,29 +125,26 @@ if(!isset($_SESSION['is_adminlogin'])){
     }
 
     .btn-login:hover {
-      background-color: #004d40;
+      background-color: #191970; /* Hover color that complements the gradient */
       transform: translateY(-3px);
     }
 
-    /* Back Button */
     .btn-info {
-      background-color: #004d40;
+      background-color: #1c6f8c; /* Darker blue for the back button */
       color: white;
       font-weight: bold;
       border-radius: 30px;
-      padding: 12px;
+      padding: 14px;
       width: 100%;
       border: none;
       margin-top: 20px;
-      text-align: center;
       transition: background-color 0.3s ease;
     }
 
     .btn-info:hover {
-      background-color: #00796b;
+      background-color:#0000CD; /* Hover color that matches the gradient tones */
     }
 
-    /* Alert Styling */
     .alert {
       margin-top: 15px;
       border-radius: 5px;
@@ -147,8 +157,8 @@ if(!isset($_SESSION['is_adminlogin'])){
 <body>
   <div class="container">
     <div class="text-center mb-3">
-      <i class="fas fa-user-cog" style="font-size: 40px; color: #00796b;"></i>
-      <h2>Admin Login - Online Maintenance Management System</h2>
+      <i class="fas fa-user-cog" style="font-size: 50px; color: #2d9cdb;"></i>
+      <h2>Admin Login</h2>
     </div>
 
     <div class="row justify-content-center">
