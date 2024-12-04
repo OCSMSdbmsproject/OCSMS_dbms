@@ -42,63 +42,63 @@ if(isset($_REQUEST['submitrequest'])){
  }
 }
 ?>
-<div class="col-sm-9 col-md-10 mt-5" style="background-color: #e3f2fd; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  <h2 class="mb-4 text-center" style="color: #333; font-weight: bold;">Submit Your Request</h2>
-  <form class="mx-5 p-4" action="" method="POST" style="background-color: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<div class="col-sm-9 col-md-10 mt-5" style="background-color:#d8f3fc; padding: 40px 30px; border-radius: 10px; box-shadow: 0 6px 12px rgba(0,0,0,0.1);">
+  <h2 class="mb-4 text-center" style="color: #333; font-weight: 600;">Submit Your Request</h2>
+  <form class="mx-5 p-4" action="" method="POST" style="background-color: #d8f3fc; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
     <div class="form-group">
-      <label for="inputRequestInfo">Request Info</label>
-      <input type="text" class="form-control" id="inputRequestInfo" placeholder="Request Info" name="requestinfo">
+      <label for="inputRequestInfo" style="font-weight: bold;">Request Info</label>
+      <input type="text" class="form-control" id="inputRequestInfo" placeholder="Request Info" name="requestinfo" style="border-radius: 8px; font-size: 16px;">
     </div>
     <div class="form-group">
-      <label for="inputRequestDescription">Description</label>
-      <input type="text" class="form-control" id="inputRequestDescription" placeholder="Write Description" name="requestdesc">
+      <label for="inputRequestDescription" style="font-weight: bold;">Description</label>
+      <input type="text" class="form-control" id="inputRequestDescription" placeholder="Write Description" name="requestdesc" style="border-radius: 8px; font-size: 16px;">
     </div>
     <div class="form-group">
-      <label for="inputName">Name</label>
-      <input type="text" class="form-control" id="inputName" placeholder="Name" name="requestername">
+      <label for="inputName" style="font-weight: bold;">Name</label>
+      <input type="text" class="form-control" id="inputName" placeholder="Name" name="requestername" style="border-radius: 8px; font-size: 16px;">
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="inputAddress">Address Line 1</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="House No. 123" name="requesteradd1">
+        <label for="inputAddress" style="font-weight: bold;">Address Line 1</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="House No. 123" name="requesteradd1" style="border-radius: 8px; font-size: 16px;">
       </div>
       <div class="form-group col-md-6">
-        <label for="inputAddress2">Address Line 2</label>
-        <input type="text" class="form-control" id="inputAddress2" placeholder="Railway Colony" name="requesteradd2">
+        <label for="inputAddress2" style="font-weight: bold;">Address Line 2</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Railway Colony" name="requesteradd2" style="border-radius: 8px; font-size: 16px;">
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="inputCity">City</label>
-        <input type="text" class="form-control" id="inputCity" name="requestercity">
+        <label for="inputCity" style="font-weight: bold;">City</label>
+        <input type="text" class="form-control" id="inputCity" name="requestercity" style="border-radius: 8px; font-size: 16px;">
       </div>
       <div class="form-group col-md-4">
-        <label for="inputState">State</label>
-        <input type="text" class="form-control" id="inputState" name="requesterstate">
+        <label for="inputState" style="font-weight: bold;">State</label>
+        <input type="text" class="form-control" id="inputState" name="requesterstate" style="border-radius: 8px; font-size: 16px;">
       </div>
       <div class="form-group col-md-2">
-        <label for="inputZip">Zip</label>
-        <input type="text" class="form-control" id="inputZip" name="requesterzip" onkeypress="isInputNumber(event)">
+        <label for="inputZip" style="font-weight: bold;">Zip</label>
+        <input type="text" class="form-control" id="inputZip" name="requesterzip" onkeypress="isInputNumber(event)" style="border-radius: 8px; font-size: 16px;">
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="inputEmail">Email</label>
-        <input type="email" class="form-control" id="inputEmail" name="requesteremail">
+        <label for="inputEmail" style="font-weight: bold;">Email</label>
+        <input type="email" class="form-control" id="inputEmail" name="requesteremail" style="border-radius: 8px; font-size: 16px;">
       </div>
       <div class="form-group col-md-2">
-        <label for="inputMobile">Mobile</label>
-        <input type="text" class="form-control" id="inputMobile" name="requestermobile" onkeypress="isInputNumber(event)">
+        <label for="inputMobile" style="font-weight: bold;">Mobile</label>
+        <input type="text" class="form-control" id="inputMobile" name="requestermobile" onkeypress="isInputNumber(event)" style="border-radius: 8px; font-size: 16px;">
       </div>
       <div class="form-group col-md-2">
-        <label for="inputDate">Date</label>
-        <input type="date" class="form-control" id="inputDate" name="requestdate">
+        <label for="inputDate" style="font-weight: bold;">Date</label>
+        <input type="date" class="form-control" id="inputDate" name="requestdate" style="border-radius: 8px; font-size: 16px;">
       </div>
     </div>
 
-    <button type="submit" class="btn btn-danger btn-sm" name="submitrequest" style="width: 140px; padding: 10px 20px; font-size: 14px; border-radius: 5px; text-align: center;">Submit</button>
-    <button type="reset" class="btn btn-secondary btn-sm" style="width: 140px; padding: 10px 20px; font-size: 14px; border-radius: 5px; text-align: center;">Reset</button>
+    <button type="submit" class="btn btn-danger btn-lg" name="submitrequest" style="width: 180px; padding: 12px 20px; font-size: 16px; border-radius: 8px; text-align: center;">Submit</button>
+    <button type="reset" class="btn btn-secondary btn-lg" style="width: 180px; padding: 12px 20px; font-size: 16px; border-radius: 8px; text-align: center;">Reset</button>
   </form>
   <?php if(isset($msg)) {echo $msg; } ?>
 </div>

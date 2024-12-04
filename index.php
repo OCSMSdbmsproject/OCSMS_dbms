@@ -221,8 +221,8 @@
 
 
 
-  <!-- Start Footer-->
-<footer class="container-fluid bg-dark text-white mt-5" style="border-top: 3px solid #DC3545;">
+ <!-- Start Footer-->
+ <footer class="container-fluid bg-dark text-white mt-5" style="border-top: 3px solid #DC3545;">
   <div class="container" style="max-width: 1100px;"> <!-- Adjusted max-width -->
     <!-- Start Footer Container -->
     <div class="row py-4">
@@ -244,7 +244,7 @@
       <div class="col-md-6 text-md-right text-center mt-3 mt-md-0" style="white-space: nowrap;">
         <small style="font-size: 0.9rem; opacity: 0.8;">Designed by DBMS team &copy; 2024</small>
         <small class="ml-2">
-          <a href="Admin/login.php" class="text-white admin-login-btn" style="text-decoration: none;">
+          <a href="Admin/login.php" class="admin-login-btn">
             Admin Login
           </a>
         </small>
@@ -252,6 +252,23 @@
     </div> <!-- End Footer Row -->
   </div> <!-- End Footer Container -->
 </footer> <!-- End Footer -->
+
+<!-- Footer Styling -->
+<style>
+  /* Admin Login Button Styling */
+  .admin-login-btn {
+      color: #fff; /* White color for the Admin Login link by default */
+      font-weight: bold;
+      transition: color 0.3s ease;
+      text-decoration: none; /* Remove underline from the link */
+  }
+
+  .admin-login-btn:hover {
+      color: #DC3545; /* Red color on hover */
+      text-decoration: none; /* Optional: remove underline */
+  }
+</style>
+
 
 
 

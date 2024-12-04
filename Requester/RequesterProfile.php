@@ -67,7 +67,7 @@ include('includes/footer.php');
 <!-- Add Custom CSS for styling -->
 <style>
   body {
-    background: linear-gradient(to right, #d0e9ff, #e3f2fd); /* Lightish blue gradient */
+    background-color: #d8f3fc;/* Lightish blue background */
     font-family: 'Poppins', sans-serif;
   }
   .container {
@@ -138,5 +138,3 @@ include('includes/footer.php');
     color: #721c24;
   }
 </style>
-
-

@@ -37,7 +37,7 @@ $serviceResult = $stmt->get_result();
 ?>
 
 <!-- Full Page Background Color Set to Lightish Blue -->
-<body style="background-color: #d1e7f7;"> <!-- Lightish Blue Background for the Entire Page -->
+<body style="background-color:  #d8f3fc;"> <!-- Lightish Blue Background for the Entire Page -->
     <div class="container" style="background-color: #e6f4ff; padding: 40px; border-radius: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); width: 90%; max-width: 700px; margin-top: 100px; margin-bottom: 40px;">
         <div style="width: 100%; text-align: center;">
             <h3 style="color: #3f4c6b; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold;">Your Service Requests</h3>
@@ -87,4 +87,4 @@ $serviceResult = $stmt->get_result();
     </div>
 </body>
 
-<?php include('includes/footer.php'); ?>
+<?php include('includes/footer.php'); ?> 

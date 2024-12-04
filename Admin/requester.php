@@ -62,7 +62,7 @@ if(isset($_SESSION['is_adminlogin'])){
 
 <!-- Add Requester Button -->
 <div class="text-center mt-3">
-  <a href="insertreq.php" class="btn btn-success btn-lg rounded-circle box shadow-lg">
+  <a href="insertreq.php" class="btn btn-red btn-lg rounded-circle box shadow-lg">
     <i class="fas fa-plus fa-2x"></i>
   </a>
 </div>
@@ -116,15 +116,16 @@ table th, table td {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Add Requester Button */
-.btn-success {
-  background-color: #28a745;
+/* Red Add Requester Button */
+.btn-red {
+  background-color: red; /* Red color for the button */
   border-radius: 50%;
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.btn-success:hover {
+.btn-red:hover {
+  background-color: darkred; /* Dark red color on hover */
   transform: scale(1.1);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
@@ -147,5 +148,4 @@ table th, table td {
     font-size: 12px;
   }
 }
-
-  </style>
+</style>

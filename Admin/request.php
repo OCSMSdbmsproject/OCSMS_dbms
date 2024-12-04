@@ -28,8 +28,8 @@ if(isset($_SESSION['is_adminlogin'])){
       echo '<div class="float-right">';
       echo '<form action="" method="POST"> 
               <input type="hidden" name="id" value='. $row["request_id"] .'>
-              <input type="submit" class="btn btn-danger btn-modern mr-3" name="view" value="View">
-              <input type="submit" class="btn btn-secondary btn-modern" name="close" value="Close">
+              <input type="submit" class="btn btn-modern mr-3 btn-view" name="view" value="View">
+              <input type="submit" class="btn btn-modern btn-close" name="close" value="Close">
             </form>';
       echo '</div>';
       echo '</div>';
@@ -61,12 +61,12 @@ if(isset($_SESSION['is_adminlogin'])){
   include('includes/footer.php'); 
   $conn->close();
 ?>
-
 <style>
+/* General Styles */
 /* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
+    /* Removed background-color */
 }
 
 /* Card Styling */
@@ -86,7 +86,7 @@ body {
 
 /* Card Header Styling */
 .card-header-custom {
-    background-color: #007bff;
+    background-color: #a3c8f0; /* Lightish Blue color for Request ID */
     color: #ffffff;
     font-size: 18px;
     font-weight: bold;
@@ -117,35 +117,38 @@ body {
     float: right;
 }
 
-/* Button Styling */
-.btn-modern {
+/* Button Styling for "View" Button - Red color */
+.btn-view {
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: #dc3545; /* Red color */
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-view:hover {
+    background-color: #c82333; /* Darker red shade on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+}
+
+/* Button Styling for "Close" Button - Light Blue Color */
+.btn-close {
+    background-color: #66b3ff; /* Light Blue color */
+    color: #fff;
+    border: none;
     border-radius: 30px;
     padding: 10px 20px;
     font-weight: bold;
     transition: all 0.3s ease;
 }
 
-.btn-modern:hover {
-    transform: scale(1.05);
+.btn-close:hover {
+    background-color: #3399ff; /* Slightly darker blue on hover */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.btn-danger {
-    background-color: #dc3545;
-    border: none;
-}
-
-.btn-danger:hover {
-    background-color: #c82333;
-}
-
-.btn-secondary {
-    background-color: #6c757d;
-    border: none;
-}
-
-.btn-secondary:hover {
-    background-color: #5a6268;
+    transform: scale(1.05);
 }
 
 /* Alert Box Styling */
@@ -181,4 +184,4 @@ body {
     }
 }
 
-  </style>
+</style>

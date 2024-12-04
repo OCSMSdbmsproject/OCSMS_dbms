@@ -33,7 +33,7 @@ if (isset($_REQUEST['passupdate'])) {
 <!-- Styling for the page -->
 <style>
     body {
-        background: #d1e7f7; /* Light blue background for the entire page */
+        background: #d8f3fc; /* Light blue background for the entire page */
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin: 0;
         padding: 0;

@@ -98,7 +98,6 @@ include('includes/footer.php');
 
 <style>
   /* Card Hover Effects */
-/* Card Hover Effects */
 .modern-card {
     border-radius: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -128,32 +127,33 @@ include('includes/footer.php');
 .btn-outline-light {
     border-radius: 30px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    color: #ffffff; /* Ensure text color is white */
+    border: 2px solid #ffffff; /* Border color matches text color */
 }
 
 .btn-outline-light:hover {
-    background-color: #fff;
-    color: #333;
+    background-color: #cccccc; /* Slightly darker gray background on hover */
+    color: #333; /* Dark text on hover for better contrast */
+    border: 2px solid #333; /* Dark border to make the button more prominent */
 }
 
-/* Table Row Hover Effect */
+/* REMOVE hover effect for table rows and columns (Requester ID, Name, Email) */
 .table-hover tbody tr:hover {
-    background-color: rgba(0, 0, 0, 0.05); /* Light hover background */
+    background-color: transparent !important; /* No background color on hover */
 }
 
-/* Card Header */
-.card-header {
-    background-color: rgba(0, 0, 0, 0.05);
-    font-weight: bold;
+.table-hover tbody tr td:hover,
+.table-hover tbody tr th:hover {
+    background-color: transparent !important; /* Ensure no hover effect on individual table cells */
 }
 
-/* Table Styling */
-.table-hover tbody tr:hover {
-    background-color: rgba(0, 0, 0, 0.05); /* Subtle hover effect on rows */
-}
-
+/* Remove striping and hover effects from individual cells */
 .table-striped tbody tr:nth-child(odd) {
-    background-color: #f8f9fa; /* Light striping */
+    background-color: #f8f9fa; /* Light striping for every odd row */
 }
 
-
-  </style>
+.table-hover tbody tr td,
+.table-hover tbody tr th {
+    background-color: transparent; /* Ensuring that no hover effect happens on individual cells */
+}
+</style>

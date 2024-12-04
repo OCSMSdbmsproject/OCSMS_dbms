@@ -120,17 +120,22 @@ table th, table td {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Add Technician Button */
+/* Add Technician Button (Updated) */
 .btn-success {
-  background-color: #28a745;
+  background-color: #dc3545; /* Red color */
   border-radius: 50%;
-  padding: 20px;
+  padding: 15px; /* Slightly smaller padding */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .btn-success:hover {
+  background-color: #dc3545 !important; /* Keep the button red on hover */
   transform: scale(1.1);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-success i {
+  font-size: 1.5rem; /* Slightly smaller font size */
 }
 
 /* Styling for Text */
@@ -152,4 +157,4 @@ table th, table td {
   }
 }
 
-  </style>
+</style>

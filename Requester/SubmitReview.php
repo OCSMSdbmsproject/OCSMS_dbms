@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <style>
         /* Page Styling */
         body {
-            background-color: #e6f4ff; /* Light blue background for outer area */
+            background-color: #d8f3fc; /* Light blue background for outer area */
             font-family: 'Arial', sans-serif;
             color: #333;
             margin: 0;

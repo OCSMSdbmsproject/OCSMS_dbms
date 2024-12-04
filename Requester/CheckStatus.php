@@ -101,6 +101,8 @@ if ($_SESSION['is_login']) {
       }
   }
 </script>
+
+
 <style>
   /* Custom CSS */
   body {
@@ -111,6 +113,37 @@ if ($_SESSION['is_login']) {
     width: 75%; /* Adjust input width */
     font-size: 18px; /* Increase font size of input */
     border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for input box */
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px;
+  }
+
+  /* Highlighting the Request ID input box when focused */
+  .form-control:focus {
+    border-color: #0056b3; /* Blue border on focus */
+    box-shadow: 0 0 10px rgba(0, 86, 179, 0.6); /* Stronger blue shadow */
+    outline: none;
+  }
+
+  /* Adding a subtle animation to the input box to attract attention */
+  .form-control:focus, .form-control:hover {
+    animation: pulse 1s infinite; /* Pulse effect on focus and hover */
+  }
+
+  /* Pulse animation to highlight the input box */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(0, 123, 255, 0.9);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+    }
   }
 
   .custom-button {
@@ -124,12 +157,36 @@ if ($_SESSION['is_login']) {
   }
 
   .custom-button:hover {
-    background-color: #87CEEB; /* Darker blue on hover */
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+
+  /* Change print button color to dark blue */
+  .print-button {
+    background-color: #0056b3; /* Dark blue color for print button */
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+
+  .print-button:hover {
+    background-color: #003f7f; /* Darker blue on hover */
   }
 
   .alert {
     background-color: #f9f9f9;
     border-color: #d6d6d6;
+  }
+
+  /* Custom Assigned Work Box Styling */
+  .assigned-work-box {
+    background-color: #ffffff; /* White background for better contrast */
+    border: 2px solid #0056b3; /* Dark blue border for visibility */
+    padding: 20px; /* Add padding inside the box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow to make it appear elevated */
+    margin-top: 30px; /* Space between form and the table */
   }
 
   .table-bordered {
@@ -139,6 +196,17 @@ if ($_SESSION['is_login']) {
   .table td {
     padding: 10px;
     font-size: 16px;
+  }
+
+  .table th {
+    background-color: #0056b3; /* Dark blue background for header */
+    color: white; /* White text for better contrast */
+    font-size: 18px;
+  }
+
+  /* Hover effect for table rows */
+  .table tbody tr:hover {
+    background-color: #f1f1f1; /* Light grey color on row hover */
   }
 
   .form-inline {
@@ -154,11 +222,6 @@ if ($_SESSION['is_login']) {
   }
 </style>
 
-
-
-
 <?php
 include('includes/footer.php');
 ?>
-
-
