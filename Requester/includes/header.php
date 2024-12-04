@@ -22,7 +22,7 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #acedf6; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
   <div class="container d-flex align-items-center" style="padding-left: 0;">
     <!-- Brand Name and Tagline Together -->
-    <a href="index.php" class="navbar-brand d-flex align-items-center text-primary font-weight-bold" style="font-size: 1.8rem; letter-spacing: 1px;">
+    <a href="RequesterProfile.php" class="navbar-brand d-flex align-items-center text-primary font-weight-bold" style="font-size: 1.8rem; letter-spacing: 1px;">
       <i style="margin-left: -350px;"></i>
       <span>FixIT</span>
       <span class="text-muted ml-2 font-italic" style="font-size: 1rem;">- Simplifying Computer Repairs For You</span>
