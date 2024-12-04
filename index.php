@@ -184,36 +184,10 @@
 
 
 
-<div class="container my-5" id="Contact">
-  <div class="row g-4 align-items-start">
-    <!-- Contact Form Column -->
-    <div class="col-md-8">
-      <?php include('contactform.php'); ?>
-    </div>
-
-    <!-- Contact Information Column -->
-    <div class="col-md-4">
-      <div class="p-4 rounded shadow" style="background-color: #80deea; color: black;">
-        <h4 class="text-center mb-4" style="color: black;">Our Offices</h4>
-
-        <!-- Headquarter -->
-        <div class="office-info mb-4">
-          <h5 class="fw-bold" style="color: black;">Headquarter</h5>
-          <p>FixIT Pvt Ltd, <br>Sec IV, Valencia <br>Manglore - 575001</p>
-          <p>Phone: 8660516530 </p>
-          <a href="#" target="_blank" class="text-dark text-decoration-none">www.fixit.com</a>
-        </div>
-
-        <!-- Manipal Branch -->
-        <div class="office-info">
-          <h5 class="fw-bold" style="color: black;">Manipal Branch</h5>
-          <p>FixIT Pvt Ltd, <br>4th cross, Shanti Nagar  <br>Manipal - 576107</p>
-          <p>Phone: 8618010600 </p>
-          <a href="#" target="_blank" class="text-dark text-decoration-none">www.fixit.com</a>
-        </div>
-      </div>
-    </div>
-  </div>
+<div>
+  <!-- Start Contact  -->
+  <?php include('Contact.php') ?>
+  <!-- End Contact  -->
 </div>
 
 
