@@ -72,7 +72,7 @@
             SIMPLIFYING COMPUTER REPAIRS FOR YOU!
         </p>
         <p class="slightly-bigger-text" style="color: #004d40; font-size: 1.2rem; margin-bottom: 1.5rem;">
-            Our platform focuses on building trust by delivering<br>consistent and high-quality services tailored to your needs.
+            Our platform focuses on building trust by delivering<br>consistent and high-quality services tailored for your needs.
         </p>
         <div class="button-group">
             <a href="Requester/RequesterLogin.php" class="btn btn-lg login-btn mx-2 px-4 py-2 shadow-lg">
