@@ -38,10 +38,9 @@ if(isset($_SESSION['is_adminlogin'])){
         echo '<td>'.$row["empMobile"].'</td>';
         echo '<td>'.$row["empEmail"].'</td>';
         echo '<td>
-                <form action="leavemessage.php" method="POST" class="d-inline">
-                  <input type="hidden" name="empid" value='.$row["empid"].'>
-                  <button type="submit" class="btn btn-warning" name="leave_message" value="Leave Message"><i class="fas fa-comments"></i> Leave Message</button>
-                </form>
+                <button class="btn btn-warning leave-message-btn" data-empid="'.$row["empid"].'" data-empname="'.$row["empName"].'">
+                  <i class="fas fa-comments"></i> Leave Message
+                </button>
               </td>';
         echo '<td>
                 <form action="editemp.php" method="POST" class="d-inline">
@@ -71,6 +70,66 @@ if(isset($_SESSION['is_adminlogin'])){
   ?>
 </div>
 
+<!-- Leave Message Modal -->
+<div class="modal fade" id="leaveMessageModal" tabindex="-1" aria-labelledby="leaveMessageModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="leaveMessageModalLabel">Leave a Message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="leaveMessageForm">
+          <input type="hidden" id="technician_id" name="technician_id">
+          <div class="mb-3">
+            <label for="technician_name" class="form-label">Technician Name</label>
+            <input type="text" id="technician_name" class="form-control" readonly>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Open the modal and populate the form
+  document.querySelectorAll('.leave-message-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const empid = button.getAttribute('data-empid');
+      const empname = button.getAttribute('data-empname');
+      document.getElementById('technician_id').value = empid;
+      document.getElementById('technician_name').value = empname;
+      new bootstrap.Modal(document.getElementById('leaveMessageModal')).show();
+    });
+  });
+
+  // Handle the form submission
+  document.getElementById('leaveMessageForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+
+    fetch('savemessage.php', {
+      method: 'POST',
+      body: formData
+    })
+      .then(response => response.text())
+      .then(data => {
+        alert(data);
+        const modal = bootstrap.Modal.getInstance(document.getElementById('leaveMessageModal'));
+        modal.hide();
+        location.reload();
+      });
+  });
+</script>
+
+
+
+
 <!-- Add Technician Button -->
 <div class="text-center mt-3">
   <a href="insertemp.php" class="btn btn-success btn-lg rounded-circle box shadow-lg">
@@ -81,82 +140,3 @@ if(isset($_SESSION['is_adminlogin'])){
 <?php
 include('includes/footer.php'); 
 ?>
-<style>
-  /* General Table Styling */
-table {
-  font-size: 16px;
-  width: 100%;
-  margin-top: 30px;
-}
-
-table th, table td {
-  padding: 12px;
-  text-align: center;
-}
-
-.table-hover tbody tr:hover {
-  background-color: #f1f1f1;
-  transition: background-color 0.3s ease;
-}
-
-.table-bordered {
-  border: 1px solid #ddd;
-}
-
-/* Heading Style */
-.bg-dark {
-  background-color: #343a40 !important;
-  padding: 20px;
-  font-size: 22px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Button Styling */
-.btn-info, .btn-danger {
-  border-radius: 8px;
-  padding: 10px 20px;
-  font-weight: 600;
-  font-size: 14px;
-  transition: all 0.3s ease;
-}
-
-.btn-info:hover, .btn-danger:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Add Technician Button */
-.btn-success {
-  background-color: #28a745;
-  border-radius: 50%;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.btn-success:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Styling for Text */
-.text-danger {
-  font-size: 18px;
-  color: red;
-  font-weight: bold;
-  margin-top: 20px;
-}
-
-/* Responsiveness */
-@media (max-width: 767px) {
-  .table th, .table td {
-    font-size: 14px;
-  }
-  .btn-info, .btn-danger {
-    padding: 8px 16px;
-    font-size: 12px;
-  }
-}
-
-  </style>

@@ -88,17 +88,18 @@
        </a>
       </li>
       <li class="nav-item">
-       <a class="nav-link <?php if(PAGE == 'work') { echo 'active'; } ?>" href="work.php">
-        <i class="fab fa-accessible-icon"></i>
-        Work Order
-       </a>
-      </li>
-      <li class="nav-item">
        <a class="nav-link <?php if(PAGE == 'request') { echo 'active'; } ?>" href="request.php">
         <i class="fas fa-align-center"></i>
         Requests
        </a>
       </li>
+      <li class="nav-item">
+       <a class="nav-link <?php if(PAGE == 'work') { echo 'active'; } ?>" href="work.php">
+        <i class="fab fa-accessible-icon"></i>
+        Work Order
+       </a>
+      </li>
+      
       <li class="nav-item">
        <a class="nav-link <?php if(PAGE == 'assets') { echo 'active'; } ?>" href="assets.php">
         <i class="fas fa-database"></i>
