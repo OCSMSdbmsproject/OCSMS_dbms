@@ -25,6 +25,7 @@ if(isset($_SESSION['is_adminlogin'])){
                   <th scope="col">City</th>
                   <th scope="col">Mobile</th>
                   <th scope="col">Email</th>
+                  <th scope="col">Notify</th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>
@@ -36,6 +37,12 @@ if(isset($_SESSION['is_adminlogin'])){
         echo '<td>'.$row["empCity"].'</td>';
         echo '<td>'.$row["empMobile"].'</td>';
         echo '<td>'.$row["empEmail"].'</td>';
+        echo '<td>
+                <form action="leavemessage.php" method="POST" class="d-inline">
+                  <input type="hidden" name="empid" value='.$row["empid"].'>
+                  <button type="submit" class="btn btn-warning" name="leave_message" value="Leave Message"><i class="fas fa-comments"></i> Leave Message</button>
+                </form>
+              </td>';
         echo '<td>
                 <form action="editemp.php" method="POST" class="d-inline">
                   <input type="hidden" name="id" value='. $row["empid"] .'>
@@ -120,22 +127,17 @@ table th, table td {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Add Technician Button (Updated) */
+/* Add Technician Button */
 .btn-success {
-  background-color: #dc3545; /* Red color */
+  background-color: #28a745;
   border-radius: 50%;
-  padding: 15px; /* Slightly smaller padding */
+  padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .btn-success:hover {
-  background-color: #dc3545 !important; /* Keep the button red on hover */
   transform: scale(1.1);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-.btn-success i {
-  font-size: 1.5rem; /* Slightly smaller font size */
 }
 
 /* Styling for Text */
@@ -157,4 +159,4 @@ table th, table td {
   }
 }
 
-</style>
+  </style>
