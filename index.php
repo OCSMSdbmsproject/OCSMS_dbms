@@ -69,7 +69,7 @@
             Welcome to <span style="color: #26a69a;">FixIT</span>
         </h1>
         <p class="lead font-italic mb-2" style="color: #004d40; text-shadow: 1px 1px 3px rgba(0,0,0,0.1);">
-            SIMPLIFYING COMPUTER REPAIRS FOR YOU
+            SIMPLIFYING COMPUTER REPAIRS FOR YOU!
         </p>
         <p class="slightly-bigger-text" style="color: #004d40; font-size: 1.2rem; margin-bottom: 1.5rem;">
             Our platform focuses on building trust by delivering<br>consistent and high-quality services tailored to your needs.
@@ -199,7 +199,7 @@
         <!-- Headquarter -->
         <div class="office-info mb-4">
           <h5 class="fw-bold" style="color: black;">Headquarter</h5>
-          <p>FixIT Pvt Ltd, <br>Sec IV, Velencia <br>Manglore - 575001</p>
+          <p>FixIT Pvt Ltd, <br>Sec IV, Valencia <br>Manglore - 575001</p>
           <p>Phone: 8660516530 </p>
           <a href="#" target="_blank" class="text-dark text-decoration-none">www.fixit.com</a>
         </div>
